@@ -1,0 +1,864 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		381FE64D1F2FA43C00C6248B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE64C1F2FA43C00C6248B /* AppDelegate.swift */; };
+		381FE6521F2FA43C00C6248B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6501F2FA43C00C6248B /* Main.storyboard */; };
+		381FE6541F2FA43C00C6248B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6531F2FA43C00C6248B /* Assets.xcassets */; };
+		381FE6571F2FA43C00C6248B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6551F2FA43C00C6248B /* LaunchScreen.storyboard */; };
+		381FE65C1F2FA43C00C6248B /* HappyTrack WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 381FE65B1F2FA43C00C6248B /* HappyTrack WatchKit App.app */; };
+		381FE6621F2FA43C00C6248B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6601F2FA43C00C6248B /* Interface.storyboard */; };
+		381FE6641F2FA43C00C6248B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6631F2FA43C00C6248B /* Assets.xcassets */; };
+		381FE66B1F2FA43C00C6248B /* HappyTrack WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 381FE66A1F2FA43C00C6248B /* HappyTrack WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		381FE6741F2FA43C00C6248B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE6731F2FA43C00C6248B /* ExtensionDelegate.swift */; };
+		381FE6761F2FA43C00C6248B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE6751F2FA43C00C6248B /* NotificationController.swift */; };
+		381FE6781F2FA43C00C6248B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6771F2FA43C00C6248B /* Assets.xcassets */; };
+		381FE6911F30FFCE00C6248B /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE6901F30FFCE00C6248B /* AppColor.swift */; };
+		381FE69A1F31A58600C6248B /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE6991F31A58600C6248B /* AppComponent.swift */; };
+		381FE69C1F31A5B200C6248B /* WatchConnectivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE69B1F31A5B200C6248B /* WatchConnectivityController.swift */; };
+		381FE69E1F31A5D100C6248B /* HealthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE69D1F31A5D100C6248B /* HealthController.swift */; };
+		381FE6A01F31AB6E00C6248B /* UIExtansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE69F1F31AB6E00C6248B /* UIExtansions.swift */; };
+		381FE6A21F31ABAD00C6248B /* convCGValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE6A11F31ABAD00C6248B /* convCGValues.swift */; };
+		38D8D3C21F33346400A456CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3C11F33346400A456CA /* Constants.swift */; };
+		38D8D3C51F333A3A00A456CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3C11F33346400A456CA /* Constants.swift */; };
+		38D8D3CD1F34C24B00A456CA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3CC1F34C24B00A456CA /* NotificationController.swift */; };
+		38D8D3D41F3B641A00A456CA /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3D31F3B641A00A456CA /* NotificationHelper.swift */; };
+		38D8D3D71F3C72F900A456CA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3D61F3C72F900A456CA /* TabBarViewController.swift */; };
+		38D8D3D91F3C73CE00A456CA /* HistorieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3D81F3C73CE00A456CA /* HistorieController.swift */; };
+		38D8D3DB1F3C73E300A456CA /* HappyTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3DA1F3C73E300A456CA /* HappyTrackViewController.swift */; };
+		38D8D3DD1F3C9B3A00A456CA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8D3DC1F3C9B3A00A456CA /* Realm.framework */; };
+		38D8D3DE1F3C9B3A00A456CA /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8D3DC1F3C9B3A00A456CA /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38D8D3E11F3C9B4100A456CA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8D3E01F3C9B4100A456CA /* RealmSwift.framework */; };
+		38D8D3E21F3C9B4100A456CA /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8D3E01F3C9B4100A456CA /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38D8D3E91F3C9E9700A456CA /* ISettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3E81F3C9E9700A456CA /* ISettingView.swift */; };
+		38D8D3EB1F3C9EA200A456CA /* IHistorieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3EA1F3C9EA200A456CA /* IHistorieView.swift */; };
+		38D8D3ED1F3C9EC400A456CA /* IHappyTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3EC1F3C9EC400A456CA /* IHappyTrackView.swift */; };
+		38D8D3EF1F3C9ED300A456CA /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3EE1F3C9ED300A456CA /* SettingPresenter.swift */; };
+		38D8D3F11F3C9EED00A456CA /* HistoriePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3F01F3C9EED00A456CA /* HistoriePresenter.swift */; };
+		38D8D3F31F3C9F0700A456CA /* HappyTrackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3F21F3C9F0700A456CA /* HappyTrackPresenter.swift */; };
+		38D8D3F61F3CA4A500A456CA /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8D3F51F3CA4A500A456CA /* HealthKit.framework */; };
+		38D8D3F81F3CA4B000A456CA /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8D3F71F3CA4B000A456CA /* HealthKit.framework */; };
+		38DB7BB81F31CD7D00A04A40 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB7BB71F31CD7D00A04A40 /* SettingViewController.swift */; };
+		38DB7BC91F31E3B300A04A40 /* StartInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB7BC81F31E3B300A04A40 /* StartInterfaceController.swift */; };
+		38DB7BCB1F31E3CF00A04A40 /* ClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB7BCA1F31E3CF00A04A40 /* ClickViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		381FE65D1F2FA43C00C6248B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 381FE6411F2FA43B00C6248B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 381FE65A1F2FA43C00C6248B;
+			remoteInfo = "HappyTrack WatchKit App";
+		};
+		381FE66C1F2FA43C00C6248B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 381FE6411F2FA43B00C6248B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 381FE6691F2FA43C00C6248B;
+			remoteInfo = "HappyTrack WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		381FE67F1F2FA43C00C6248B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				381FE66B1F2FA43C00C6248B /* HappyTrack WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		381FE6831F2FA43C00C6248B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				381FE65C1F2FA43C00C6248B /* HappyTrack WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D8D3DF1F3C9B3A00A456CA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				38D8D3E21F3C9B4100A456CA /* RealmSwift.framework in Embed Frameworks */,
+				38D8D3DE1F3C9B3A00A456CA /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		381FE6491F2FA43C00C6248B /* HappyTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		381FE64C1F2FA43C00C6248B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		381FE6511F2FA43C00C6248B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		381FE6531F2FA43C00C6248B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		381FE6561F2FA43C00C6248B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		381FE6581F2FA43C00C6248B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		381FE65B1F2FA43C00C6248B /* HappyTrack WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HappyTrack WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		381FE6611F2FA43C00C6248B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		381FE6631F2FA43C00C6248B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		381FE6651F2FA43C00C6248B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		381FE66A1F2FA43C00C6248B /* HappyTrack WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HappyTrack WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		381FE6701F2FA43C00C6248B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		381FE6731F2FA43C00C6248B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		381FE6751F2FA43C00C6248B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		381FE6771F2FA43C00C6248B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		381FE6791F2FA43C00C6248B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		381FE6871F30FE8D00C6248B /* HappyTrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HappyTrack.entitlements; sourceTree = "<group>"; };
+		381FE6881F30FEA200C6248B /* HappyTrack WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HappyTrack WatchKit App.entitlements"; sourceTree = "<group>"; };
+		381FE6891F30FEAC00C6248B /* HappyTrack WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HappyTrack WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		381FE6901F30FFCE00C6248B /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		381FE6991F31A58600C6248B /* AppComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		381FE69B1F31A5B200C6248B /* WatchConnectivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectivityController.swift; sourceTree = "<group>"; };
+		381FE69D1F31A5D100C6248B /* HealthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthController.swift; sourceTree = "<group>"; };
+		381FE69F1F31AB6E00C6248B /* UIExtansions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtansions.swift; sourceTree = "<group>"; };
+		381FE6A11F31ABAD00C6248B /* convCGValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = convCGValues.swift; sourceTree = "<group>"; };
+		38D8D3C11F33346400A456CA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		38D8D3CC1F34C24B00A456CA /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		38D8D3D31F3B641A00A456CA /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		38D8D3D61F3C72F900A456CA /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		38D8D3D81F3C73CE00A456CA /* HistorieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorieController.swift; sourceTree = "<group>"; };
+		38D8D3DA1F3C73E300A456CA /* HappyTrackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappyTrackViewController.swift; sourceTree = "<group>"; };
+		38D8D3DC1F3C9B3A00A456CA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		38D8D3E01F3C9B4100A456CA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		38D8D3E81F3C9E9700A456CA /* ISettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISettingView.swift; sourceTree = "<group>"; };
+		38D8D3EA1F3C9EA200A456CA /* IHistorieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHistorieView.swift; sourceTree = "<group>"; };
+		38D8D3EC1F3C9EC400A456CA /* IHappyTrackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHappyTrackView.swift; sourceTree = "<group>"; };
+		38D8D3EE1F3C9ED300A456CA /* SettingPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
+		38D8D3F01F3C9EED00A456CA /* HistoriePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoriePresenter.swift; sourceTree = "<group>"; };
+		38D8D3F21F3C9F0700A456CA /* HappyTrackPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappyTrackPresenter.swift; sourceTree = "<group>"; };
+		38D8D3F51F3CA4A500A456CA /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		38D8D3F71F3CA4B000A456CA /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		38DB7BB71F31CD7D00A04A40 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		38DB7BC81F31E3B300A04A40 /* StartInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartInterfaceController.swift; sourceTree = "<group>"; };
+		38DB7BCA1F31E3CF00A04A40 /* ClickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		381FE6461F2FA43C00C6248B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D8D3F61F3CA4A500A456CA /* HealthKit.framework in Frameworks */,
+				38D8D3E11F3C9B4100A456CA /* RealmSwift.framework in Frameworks */,
+				38D8D3DD1F3C9B3A00A456CA /* Realm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		381FE6671F2FA43C00C6248B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D8D3F81F3CA4B000A456CA /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		381FE6401F2FA43B00C6248B = {
+			isa = PBXGroup;
+			children = (
+				38D8D3E01F3C9B4100A456CA /* RealmSwift.framework */,
+				38D8D3DC1F3C9B3A00A456CA /* Realm.framework */,
+				381FE64B1F2FA43C00C6248B /* HappyTrack */,
+				381FE65F1F2FA43C00C6248B /* HappyTrack WatchKit App */,
+				381FE66E1F2FA43C00C6248B /* HappyTrack WatchKit Extension */,
+				381FE64A1F2FA43C00C6248B /* Products */,
+				38D8D3F41F3CA4A500A456CA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		381FE64A1F2FA43C00C6248B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				381FE6491F2FA43C00C6248B /* HappyTrack.app */,
+				381FE65B1F2FA43C00C6248B /* HappyTrack WatchKit App.app */,
+				381FE66A1F2FA43C00C6248B /* HappyTrack WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		381FE64B1F2FA43C00C6248B /* HappyTrack */ = {
+			isa = PBXGroup;
+			children = (
+				381FE68D1F30FF9D00C6248B /* app */,
+				381FE6531F2FA43C00C6248B /* Assets.xcassets */,
+				381FE6871F30FE8D00C6248B /* HappyTrack.entitlements */,
+				381FE6581F2FA43C00C6248B /* Info.plist */,
+				381FE6551F2FA43C00C6248B /* LaunchScreen.storyboard */,
+				381FE6501F2FA43C00C6248B /* Main.storyboard */,
+			);
+			path = HappyTrack;
+			sourceTree = "<group>";
+		};
+		381FE65F1F2FA43C00C6248B /* HappyTrack WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				381FE6881F30FEA200C6248B /* HappyTrack WatchKit App.entitlements */,
+				381FE6601F2FA43C00C6248B /* Interface.storyboard */,
+				381FE6631F2FA43C00C6248B /* Assets.xcassets */,
+				381FE6651F2FA43C00C6248B /* Info.plist */,
+			);
+			path = "HappyTrack WatchKit App";
+			sourceTree = "<group>";
+		};
+		381FE66E1F2FA43C00C6248B /* HappyTrack WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				38DB7BC71F31DEAC00A04A40 /* data */,
+				38DB7BC61F31DEA700A04A40 /* app */,
+				38DB7BC51F31DE9F00A04A40 /* view */,
+				381FE6891F30FEAC00C6248B /* HappyTrack WatchKit Extension.entitlements */,
+				381FE6731F2FA43C00C6248B /* ExtensionDelegate.swift */,
+				381FE6751F2FA43C00C6248B /* NotificationController.swift */,
+				381FE6771F2FA43C00C6248B /* Assets.xcassets */,
+				381FE6791F2FA43C00C6248B /* Info.plist */,
+				381FE66F1F2FA43C00C6248B /* Supporting Files */,
+			);
+			path = "HappyTrack WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		381FE66F1F2FA43C00C6248B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				381FE6701F2FA43C00C6248B /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		381FE68D1F30FF9D00C6248B /* app */ = {
+			isa = PBXGroup;
+			children = (
+				381FE64C1F2FA43C00C6248B /* AppDelegate.swift */,
+				38D8D3BE1F33329700A456CA /* application */,
+				38D8D3BC1F3331BB00A456CA /* model */,
+				38D8D3BB1F33314600A456CA /* support */,
+				381FE68F1F30FFB900C6248B /* view */,
+			);
+			name = app;
+			sourceTree = "<group>";
+		};
+		381FE68F1F30FFB900C6248B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				38D8D3D61F3C72F900A456CA /* TabBarViewController.swift */,
+				38D8D3E51F3C9E4B00A456CA /* setting */,
+				38D8D3E41F3C9E3F00A456CA /* historie */,
+				38D8D3E71F3C9E6100A456CA /* happytrack */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		38D8D3BB1F33314600A456CA /* support */ = {
+			isa = PBXGroup;
+			children = (
+				381FE6901F30FFCE00C6248B /* AppColor.swift */,
+				381FE6A11F31ABAD00C6248B /* convCGValues.swift */,
+				381FE69F1F31AB6E00C6248B /* UIExtansions.swift */,
+				38D8D3C11F33346400A456CA /* Constants.swift */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
+		38D8D3BC1F3331BB00A456CA /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		38D8D3BE1F33329700A456CA /* application */ = {
+			isa = PBXGroup;
+			children = (
+				381FE6991F31A58600C6248B /* AppComponent.swift */,
+				381FE69B1F31A5B200C6248B /* WatchConnectivityController.swift */,
+				381FE69D1F31A5D100C6248B /* HealthController.swift */,
+				38D8D3CC1F34C24B00A456CA /* NotificationController.swift */,
+			);
+			name = application;
+			sourceTree = "<group>";
+		};
+		38D8D3E41F3C9E3F00A456CA /* historie */ = {
+			isa = PBXGroup;
+			children = (
+				38D8D3D81F3C73CE00A456CA /* HistorieController.swift */,
+				38D8D3EA1F3C9EA200A456CA /* IHistorieView.swift */,
+				38D8D3F01F3C9EED00A456CA /* HistoriePresenter.swift */,
+			);
+			name = historie;
+			sourceTree = "<group>";
+		};
+		38D8D3E51F3C9E4B00A456CA /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				38DB7BB71F31CD7D00A04A40 /* SettingViewController.swift */,
+				38D8D3E81F3C9E9700A456CA /* ISettingView.swift */,
+				38D8D3EE1F3C9ED300A456CA /* SettingPresenter.swift */,
+			);
+			name = setting;
+			sourceTree = "<group>";
+		};
+		38D8D3E71F3C9E6100A456CA /* happytrack */ = {
+			isa = PBXGroup;
+			children = (
+				38D8D3DA1F3C73E300A456CA /* HappyTrackViewController.swift */,
+				38D8D3EC1F3C9EC400A456CA /* IHappyTrackView.swift */,
+				38D8D3F21F3C9F0700A456CA /* HappyTrackPresenter.swift */,
+			);
+			name = happytrack;
+			sourceTree = "<group>";
+		};
+		38D8D3F41F3CA4A500A456CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38D8D3F71F3CA4B000A456CA /* HealthKit.framework */,
+				38D8D3F51F3CA4A500A456CA /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38DB7BC51F31DE9F00A04A40 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				38DB7BC81F31E3B300A04A40 /* StartInterfaceController.swift */,
+				38DB7BCA1F31E3CF00A04A40 /* ClickViewController.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		38DB7BC61F31DEA700A04A40 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				38D8D3D31F3B641A00A456CA /* NotificationHelper.swift */,
+			);
+			name = app;
+			sourceTree = "<group>";
+		};
+		38DB7BC71F31DEAC00A04A40 /* data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		381FE6481F2FA43C00C6248B /* HappyTrack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 381FE6841F2FA43C00C6248B /* Build configuration list for PBXNativeTarget "HappyTrack" */;
+			buildPhases = (
+				381FE6451F2FA43C00C6248B /* Sources */,
+				381FE6461F2FA43C00C6248B /* Frameworks */,
+				381FE6471F2FA43C00C6248B /* Resources */,
+				381FE6831F2FA43C00C6248B /* Embed Watch Content */,
+				38D8D3DF1F3C9B3A00A456CA /* Embed Frameworks */,
+				38D8D3E31F3C9BC100A456CA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				381FE65E1F2FA43C00C6248B /* PBXTargetDependency */,
+			);
+			name = HappyTrack;
+			productName = HappyTrack;
+			productReference = 381FE6491F2FA43C00C6248B /* HappyTrack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		381FE65A1F2FA43C00C6248B /* HappyTrack WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 381FE6801F2FA43C00C6248B /* Build configuration list for PBXNativeTarget "HappyTrack WatchKit App" */;
+			buildPhases = (
+				381FE6591F2FA43C00C6248B /* Resources */,
+				381FE67F1F2FA43C00C6248B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				381FE66D1F2FA43C00C6248B /* PBXTargetDependency */,
+			);
+			name = "HappyTrack WatchKit App";
+			productName = "HappyTrack WatchKit App";
+			productReference = 381FE65B1F2FA43C00C6248B /* HappyTrack WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		381FE6691F2FA43C00C6248B /* HappyTrack WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 381FE67C1F2FA43C00C6248B /* Build configuration list for PBXNativeTarget "HappyTrack WatchKit Extension" */;
+			buildPhases = (
+				381FE6661F2FA43C00C6248B /* Sources */,
+				381FE6671F2FA43C00C6248B /* Frameworks */,
+				381FE6681F2FA43C00C6248B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HappyTrack WatchKit Extension";
+			productName = "HappyTrack WatchKit Extension";
+			productReference = 381FE66A1F2FA43C00C6248B /* HappyTrack WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		381FE6411F2FA43B00C6248B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Martin Weber";
+				TargetAttributes = {
+					381FE6481F2FA43C00C6248B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7NV745LHBB;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+					381FE65A1F2FA43C00C6248B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7NV745LHBB;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					381FE6691F2FA43C00C6248B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7NV745LHBB;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 381FE6441F2FA43B00C6248B /* Build configuration list for PBXProject "HappyTrack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 381FE6401F2FA43B00C6248B;
+			productRefGroup = 381FE64A1F2FA43C00C6248B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				381FE6481F2FA43C00C6248B /* HappyTrack */,
+				381FE65A1F2FA43C00C6248B /* HappyTrack WatchKit App */,
+				381FE6691F2FA43C00C6248B /* HappyTrack WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		381FE6471F2FA43C00C6248B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				381FE6571F2FA43C00C6248B /* LaunchScreen.storyboard in Resources */,
+				381FE6541F2FA43C00C6248B /* Assets.xcassets in Resources */,
+				381FE6521F2FA43C00C6248B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		381FE6591F2FA43C00C6248B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				381FE6641F2FA43C00C6248B /* Assets.xcassets in Resources */,
+				381FE6621F2FA43C00C6248B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		381FE6681F2FA43C00C6248B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				381FE6781F2FA43C00C6248B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38D8D3E31F3C9BC100A456CA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		381FE6451F2FA43C00C6248B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D8D3CD1F34C24B00A456CA /* NotificationController.swift in Sources */,
+				381FE69E1F31A5D100C6248B /* HealthController.swift in Sources */,
+				38D8D3D71F3C72F900A456CA /* TabBarViewController.swift in Sources */,
+				38D8D3E91F3C9E9700A456CA /* ISettingView.swift in Sources */,
+				38D8D3EF1F3C9ED300A456CA /* SettingPresenter.swift in Sources */,
+				38DB7BB81F31CD7D00A04A40 /* SettingViewController.swift in Sources */,
+				381FE69A1F31A58600C6248B /* AppComponent.swift in Sources */,
+				381FE64D1F2FA43C00C6248B /* AppDelegate.swift in Sources */,
+				381FE6A01F31AB6E00C6248B /* UIExtansions.swift in Sources */,
+				381FE6A21F31ABAD00C6248B /* convCGValues.swift in Sources */,
+				381FE6911F30FFCE00C6248B /* AppColor.swift in Sources */,
+				38D8D3F11F3C9EED00A456CA /* HistoriePresenter.swift in Sources */,
+				38D8D3DB1F3C73E300A456CA /* HappyTrackViewController.swift in Sources */,
+				38D8D3ED1F3C9EC400A456CA /* IHappyTrackView.swift in Sources */,
+				381FE69C1F31A5B200C6248B /* WatchConnectivityController.swift in Sources */,
+				38D8D3F31F3C9F0700A456CA /* HappyTrackPresenter.swift in Sources */,
+				38D8D3EB1F3C9EA200A456CA /* IHistorieView.swift in Sources */,
+				38D8D3D91F3C73CE00A456CA /* HistorieController.swift in Sources */,
+				38D8D3C21F33346400A456CA /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		381FE6661F2FA43C00C6248B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DB7BC91F31E3B300A04A40 /* StartInterfaceController.swift in Sources */,
+				38DB7BCB1F31E3CF00A04A40 /* ClickViewController.swift in Sources */,
+				381FE6761F2FA43C00C6248B /* NotificationController.swift in Sources */,
+				381FE6741F2FA43C00C6248B /* ExtensionDelegate.swift in Sources */,
+				38D8D3C51F333A3A00A456CA /* Constants.swift in Sources */,
+				38D8D3D41F3B641A00A456CA /* NotificationHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		381FE65E1F2FA43C00C6248B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 381FE65A1F2FA43C00C6248B /* HappyTrack WatchKit App */;
+			targetProxy = 381FE65D1F2FA43C00C6248B /* PBXContainerItemProxy */;
+		};
+		381FE66D1F2FA43C00C6248B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 381FE6691F2FA43C00C6248B /* HappyTrack WatchKit Extension */;
+			targetProxy = 381FE66C1F2FA43C00C6248B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		381FE6501F2FA43C00C6248B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				381FE6511F2FA43C00C6248B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		381FE6551F2FA43C00C6248B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				381FE6561F2FA43C00C6248B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		381FE6601F2FA43C00C6248B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				381FE6611F2FA43C00C6248B /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		381FE67A1F2FA43C00C6248B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		381FE67B1F2FA43C00C6248B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		381FE67D1F2FA43C00C6248B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HappyTrack WatchKit Extension/HappyTrack WatchKit Extension.entitlements";
+				DEVELOPMENT_TEAM = 7NV745LHBB;
+				INFOPLIST_FILE = "HappyTrack WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.mweber.uni.HappyTrack.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		381FE67E1F2FA43C00C6248B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HappyTrack WatchKit Extension/HappyTrack WatchKit Extension.entitlements";
+				DEVELOPMENT_TEAM = 7NV745LHBB;
+				INFOPLIST_FILE = "HappyTrack WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.mweber.uni.HappyTrack.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		381FE6811F2FA43C00C6248B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HappyTrack WatchKit App/HappyTrack WatchKit App.entitlements";
+				DEVELOPMENT_TEAM = 7NV745LHBB;
+				IBSC_MODULE = HappyTrack_WatchKit_Extension;
+				INFOPLIST_FILE = "HappyTrack WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = de.mweber.uni.HappyTrack.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		381FE6821F2FA43C00C6248B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HappyTrack WatchKit App/HappyTrack WatchKit App.entitlements";
+				DEVELOPMENT_TEAM = 7NV745LHBB;
+				IBSC_MODULE = HappyTrack_WatchKit_Extension;
+				INFOPLIST_FILE = "HappyTrack WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = de.mweber.uni.HappyTrack.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		381FE6851F2FA43C00C6248B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HappyTrack/HappyTrack.entitlements;
+				DEVELOPMENT_TEAM = 7NV745LHBB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = HappyTrack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.mweber.uni.HappyTrack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		381FE6861F2FA43C00C6248B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HappyTrack/HappyTrack.entitlements;
+				DEVELOPMENT_TEAM = 7NV745LHBB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = HappyTrack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.mweber.uni.HappyTrack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		381FE6441F2FA43B00C6248B /* Build configuration list for PBXProject "HappyTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				381FE67A1F2FA43C00C6248B /* Debug */,
+				381FE67B1F2FA43C00C6248B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		381FE67C1F2FA43C00C6248B /* Build configuration list for PBXNativeTarget "HappyTrack WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				381FE67D1F2FA43C00C6248B /* Debug */,
+				381FE67E1F2FA43C00C6248B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		381FE6801F2FA43C00C6248B /* Build configuration list for PBXNativeTarget "HappyTrack WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				381FE6811F2FA43C00C6248B /* Debug */,
+				381FE6821F2FA43C00C6248B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		381FE6841F2FA43C00C6248B /* Build configuration list for PBXNativeTarget "HappyTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				381FE6851F2FA43C00C6248B /* Debug */,
+				381FE6861F2FA43C00C6248B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 381FE6411F2FA43B00C6248B /* Project object */;
+}

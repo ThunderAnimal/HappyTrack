@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--HappyTrack-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="HappyTrack" id="AgC-eL-Hgc" customClass="StartInterfaceController" customModule="HappyTrack_WatchKit_Extension">
+                    <items>
+                        <label width="134" alignment="left" text="Hey, " id="kU3-9f-Lp0"/>
+                        <label width="1" alignment="left" text="versuche nun auf der folgenden Seite das Element anzuklicken." numberOfLines="8" id="UMl-Qp-5Er"/>
+                        <imageView width="67" height="65" alignment="center" image="swipe-left" id="ZKN-1D-HCs"/>
+                    </items>
+                    <connections>
+                        <outlet property="usernameLabel" destination="kU3-9f-Lp0" id="YFI-id-qEr"/>
+                        <segue destination="kfX-kY-ViJ" kind="relationship" relationship="nextPage" id="HGq-qU-6ss"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="192" y="345"/>
+        </scene>
+        <!--Click-Challange-->
+        <scene sceneID="QkY-HE-S7v">
+            <objects>
+                <controller title="Click-Challange" id="kfX-kY-ViJ" customClass="ClickViewController" customModule="HappyTrack_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" id="JjO-Ik-c23">
+                            <items>
+                                <button width="50" height="50" alignment="center" verticalAlignment="center" backgroundImage="icon" id="HM7-tt-8t7">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <connections>
+                                        <action selector="clickButton" destination="kfX-kY-ViJ" id="KZT-9t-Txl"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="cRi-GQ-29j">
+                                    <connections>
+                                        <action selector="tapRecognized:" destination="kfX-kY-ViJ" id="iUS-yf-nKV"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="btnClick" destination="HM7-tt-8t7" id="RmE-VX-SgA"/>
+                        <outlet property="tapGroup" destination="JjO-Ik-c23" id="dFh-NB-gFb"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="475" y="352"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="10" id="IdU-wH-bcW"/>
+                        <imageView width="50" height="50" alignment="center" image="start" id="BNO-TO-Dht"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="HAPPYTRACK_NEEDED" id="JfB-70-Muf">
+                        <color key="titleColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </notificationCategory>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="KM3-BQ-avL">
+            <objects>
+                <notificationController id="Bbb-f6-Vuh">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="10" id="mjY-GT-i2M"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="GENERAL" id="uSv-x6-mFO"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="mjY-GT-i2M" id="vBc-1a-fzt"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="219" y="914"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
