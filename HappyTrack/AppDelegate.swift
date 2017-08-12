@@ -33,11 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //----- CHECK IF first Start
         let userDefaults = UserDefaults()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if(!userDefaults.bool(forKey: Constants.General.onboardingApp.key())){
-            print("FIRST START")
+            self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "OnBoardingScreen")
             userDefaults.set(true, forKey: Constants.General.onboardingApp.key())
         }else{
-            print("ONBOARDING FINISHED")
+            self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "StartAppScreen")
         }
         
         return true
