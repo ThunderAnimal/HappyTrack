@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3818342F1F43404400C1A6A5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818342E1F43404400C1A6A5 /* SettingViewController.swift */; };
+		3818344F1F444B3300C1A6A5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818344E1F444B3300C1A6A5 /* DataController.swift */; };
+		381834521F45806600C1A6A5 /* OnBoardNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834511F45806600C1A6A5 /* OnBoardNameViewController.swift */; };
+		381834541F45808100C1A6A5 /* OnBoardsNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834531F45808100C1A6A5 /* OnBoardsNotificationViewController.swift */; };
+		381834561F4580A800C1A6A5 /* OnBoardGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834551F4580A800C1A6A5 /* OnBoardGoalsViewController.swift */; };
 		381FE64D1F2FA43C00C6248B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE64C1F2FA43C00C6248B /* AppDelegate.swift */; };
 		381FE6521F2FA43C00C6248B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6501F2FA43C00C6248B /* Main.storyboard */; };
 		381FE6541F2FA43C00C6248B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6531F2FA43C00C6248B /* Assets.xcassets */; };
@@ -43,9 +48,10 @@
 		38D8D3F31F3C9F0700A456CA /* HappyTrackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3F21F3C9F0700A456CA /* HappyTrackPresenter.swift */; };
 		38D8D3F61F3CA4A500A456CA /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8D3F51F3CA4A500A456CA /* HealthKit.framework */; };
 		38D8D3F81F3CA4B000A456CA /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8D3F71F3CA4B000A456CA /* HealthKit.framework */; };
-		38DB7BB81F31CD7D00A04A40 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB7BB71F31CD7D00A04A40 /* SettingViewController.swift */; };
+		38DB7BB81F31CD7D00A04A40 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB7BB71F31CD7D00A04A40 /* OnboardViewController.swift */; };
 		38DB7BC91F31E3B300A04A40 /* StartInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB7BC81F31E3B300A04A40 /* StartInterfaceController.swift */; };
 		38DB7BCB1F31E3CF00A04A40 /* ClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB7BCA1F31E3CF00A04A40 /* ClickViewController.swift */; };
+		B78653FEE90800AAAF577362 /* Pods_HappyTrack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D28213CB1898CB7C004E41 /* Pods_HappyTrack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +109,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3818342E1F43404400C1A6A5 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		3818344E1F444B3300C1A6A5 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		381834511F45806600C1A6A5 /* OnBoardNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardNameViewController.swift; sourceTree = "<group>"; };
+		381834531F45808100C1A6A5 /* OnBoardsNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardsNotificationViewController.swift; sourceTree = "<group>"; };
+		381834551F4580A800C1A6A5 /* OnBoardGoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardGoalsViewController.swift; sourceTree = "<group>"; };
 		381FE6491F2FA43C00C6248B /* HappyTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		381FE64C1F2FA43C00C6248B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		381FE6511F2FA43C00C6248B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,6 +139,7 @@
 		381FE69D1F31A5D100C6248B /* HealthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthController.swift; sourceTree = "<group>"; };
 		381FE69F1F31AB6E00C6248B /* UIExtansions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtansions.swift; sourceTree = "<group>"; };
 		381FE6A11F31ABAD00C6248B /* convCGValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = convCGValues.swift; sourceTree = "<group>"; };
+		38D28213CB1898CB7C004E41 /* Pods_HappyTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D8D3C11F33346400A456CA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38D8D3CC1F34C24B00A456CA /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		38D8D3D31F3B641A00A456CA /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
@@ -144,9 +156,11 @@
 		38D8D3F21F3C9F0700A456CA /* HappyTrackPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappyTrackPresenter.swift; sourceTree = "<group>"; };
 		38D8D3F51F3CA4A500A456CA /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		38D8D3F71F3CA4B000A456CA /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
-		38DB7BB71F31CD7D00A04A40 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		38DB7BB71F31CD7D00A04A40 /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
 		38DB7BC81F31E3B300A04A40 /* StartInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartInterfaceController.swift; sourceTree = "<group>"; };
 		38DB7BCA1F31E3CF00A04A40 /* ClickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickViewController.swift; sourceTree = "<group>"; };
+		77C33AF6B5044A06C839A3B2 /* Pods-HappyTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyTrack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyTrack/Pods-HappyTrack.debug.xcconfig"; sourceTree = "<group>"; };
+		809DD04275F3449EBBC20BB2 /* Pods-HappyTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyTrack.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyTrack/Pods-HappyTrack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +171,7 @@
 				38D8D3F61F3CA4A500A456CA /* HealthKit.framework in Frameworks */,
 				38D8D3E11F3C9B4100A456CA /* RealmSwift.framework in Frameworks */,
 				38D8D3DD1F3C9B3A00A456CA /* Realm.framework in Frameworks */,
+				B78653FEE90800AAAF577362 /* Pods_HappyTrack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,9 +183,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E21DCCC4CB43AB991ABAD090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		381834501F457FAF00C1A6A5 /* onboard */ = {
+			isa = PBXGroup;
+			children = (
+				38DB7BB71F31CD7D00A04A40 /* OnboardViewController.swift */,
+				381834511F45806600C1A6A5 /* OnBoardNameViewController.swift */,
+				381834531F45808100C1A6A5 /* OnBoardsNotificationViewController.swift */,
+				381834551F4580A800C1A6A5 /* OnBoardGoalsViewController.swift */,
+			);
+			name = onboard;
+			sourceTree = "<group>";
+		};
 		381FE6401F2FA43B00C6248B = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +214,7 @@
 				381FE66E1F2FA43C00C6248B /* HappyTrack WatchKit Extension */,
 				381FE64A1F2FA43C00C6248B /* Products */,
 				38D8D3F41F3CA4A500A456CA /* Frameworks */,
+				F7570E99A3396EFF65923823 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -257,6 +291,7 @@
 		381FE68F1F30FFB900C6248B /* view */ = {
 			isa = PBXGroup;
 			children = (
+				381834501F457FAF00C1A6A5 /* onboard */,
 				38D8D3D61F3C72F900A456CA /* TabBarViewController.swift */,
 				38D8D3E51F3C9E4B00A456CA /* setting */,
 				38D8D3E41F3C9E3F00A456CA /* historie */,
@@ -290,6 +325,7 @@
 				381FE69B1F31A5B200C6248B /* WatchConnectivityController.swift */,
 				381FE69D1F31A5D100C6248B /* HealthController.swift */,
 				38D8D3CC1F34C24B00A456CA /* NotificationController.swift */,
+				3818344E1F444B3300C1A6A5 /* DataController.swift */,
 			);
 			name = application;
 			sourceTree = "<group>";
@@ -307,9 +343,9 @@
 		38D8D3E51F3C9E4B00A456CA /* setting */ = {
 			isa = PBXGroup;
 			children = (
-				38DB7BB71F31CD7D00A04A40 /* SettingViewController.swift */,
 				38D8D3E81F3C9E9700A456CA /* ISettingView.swift */,
 				38D8D3EE1F3C9ED300A456CA /* SettingPresenter.swift */,
+				3818342E1F43404400C1A6A5 /* SettingViewController.swift */,
 			);
 			name = setting;
 			sourceTree = "<group>";
@@ -329,6 +365,7 @@
 			children = (
 				38D8D3F71F3CA4B000A456CA /* HealthKit.framework */,
 				38D8D3F51F3CA4A500A456CA /* HealthKit.framework */,
+				38D28213CB1898CB7C004E41 /* Pods_HappyTrack.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -357,6 +394,15 @@
 			name = data;
 			sourceTree = "<group>";
 		};
+		F7570E99A3396EFF65923823 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77C33AF6B5044A06C839A3B2 /* Pods-HappyTrack.debug.xcconfig */,
+				809DD04275F3449EBBC20BB2 /* Pods-HappyTrack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,12 +410,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 381FE6841F2FA43C00C6248B /* Build configuration list for PBXNativeTarget "HappyTrack" */;
 			buildPhases = (
+				8A292B0E7FD0A3763D991DD1 /* [CP] Check Pods Manifest.lock */,
 				381FE6451F2FA43C00C6248B /* Sources */,
 				381FE6461F2FA43C00C6248B /* Frameworks */,
 				381FE6471F2FA43C00C6248B /* Resources */,
 				381FE6831F2FA43C00C6248B /* Embed Watch Content */,
 				38D8D3DF1F3C9B3A00A456CA /* Embed Frameworks */,
 				38D8D3E31F3C9BC100A456CA /* ShellScript */,
+				25AD7AE2E21484D227454C65 /* [CP] Embed Pods Frameworks */,
+				551AE19EC05B97E6F7CDCBF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -387,6 +436,7 @@
 			buildPhases = (
 				381FE6591F2FA43C00C6248B /* Resources */,
 				381FE67F1F2FA43C00C6248B /* Embed App Extensions */,
+				E21DCCC4CB43AB991ABAD090 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -428,6 +478,7 @@
 					381FE6481F2FA43C00C6248B = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7NV745LHBB;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -514,6 +565,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		25AD7AE2E21484D227454C65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HappyTrack/Pods-HappyTrack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyTrack/Pods-HappyTrack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		38D8D3E31F3C9BC100A456CA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
@@ -527,6 +596,39 @@
 			shellPath = /bin/sh;
 			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
 		};
+		551AE19EC05B97E6F7CDCBF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyTrack/Pods-HappyTrack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A292B0E7FD0A3763D991DD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HappyTrack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -534,13 +636,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381834541F45808100C1A6A5 /* OnBoardsNotificationViewController.swift in Sources */,
 				38D8D3CD1F34C24B00A456CA /* NotificationController.swift in Sources */,
 				381FE69E1F31A5D100C6248B /* HealthController.swift in Sources */,
 				38D8D3D71F3C72F900A456CA /* TabBarViewController.swift in Sources */,
 				38D8D3E91F3C9E9700A456CA /* ISettingView.swift in Sources */,
 				38D8D3EF1F3C9ED300A456CA /* SettingPresenter.swift in Sources */,
-				38DB7BB81F31CD7D00A04A40 /* SettingViewController.swift in Sources */,
+				38DB7BB81F31CD7D00A04A40 /* OnboardViewController.swift in Sources */,
 				381FE69A1F31A58600C6248B /* AppComponent.swift in Sources */,
+				3818344F1F444B3300C1A6A5 /* DataController.swift in Sources */,
 				381FE64D1F2FA43C00C6248B /* AppDelegate.swift in Sources */,
 				381FE6A01F31AB6E00C6248B /* UIExtansions.swift in Sources */,
 				381FE6A21F31ABAD00C6248B /* convCGValues.swift in Sources */,
@@ -549,10 +653,13 @@
 				38D8D3DB1F3C73E300A456CA /* HappyTrackViewController.swift in Sources */,
 				38D8D3ED1F3C9EC400A456CA /* IHappyTrackView.swift in Sources */,
 				381FE69C1F31A5B200C6248B /* WatchConnectivityController.swift in Sources */,
+				3818342F1F43404400C1A6A5 /* SettingViewController.swift in Sources */,
+				381834561F4580A800C1A6A5 /* OnBoardGoalsViewController.swift in Sources */,
 				38D8D3F31F3C9F0700A456CA /* HappyTrackPresenter.swift in Sources */,
 				38D8D3EB1F3C9EA200A456CA /* IHistorieView.swift in Sources */,
 				38D8D3D91F3C73CE00A456CA /* HistorieController.swift in Sources */,
 				38D8D3C21F33346400A456CA /* Constants.swift in Sources */,
+				381834521F45806600C1A6A5 /* OnBoardNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,10 +892,13 @@
 		};
 		381FE6851F2FA43C00C6248B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77C33AF6B5044A06C839A3B2 /* Pods-HappyTrack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = HappyTrack/HappyTrack.entitlements;
 				DEVELOPMENT_TEAM = 7NV745LHBB;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -797,6 +907,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.mweber.uni.HappyTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -804,10 +915,13 @@
 		};
 		381FE6861F2FA43C00C6248B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 809DD04275F3449EBBC20BB2 /* Pods-HappyTrack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = HappyTrack/HappyTrack.entitlements;
 				DEVELOPMENT_TEAM = 7NV745LHBB;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

@@ -1,0 +1,6 @@
+framework module Pods_HappyTrack {
+  umbrella header "Pods-HappyTrack-umbrella.h"
+
+  export *
+  module * { export * }
+}

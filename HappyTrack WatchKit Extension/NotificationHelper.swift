@@ -68,10 +68,12 @@ class NotificationHelper: NSObject {
         
         let DateIdentifier = identifier + "_" + dateNowString.string(from: dateNow)
         
+        
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = body
         content.categoryIdentifier = Constants.NotificationCategory.general.indentifier()
+        
         content.sound = UNNotificationSound.default()
         
         

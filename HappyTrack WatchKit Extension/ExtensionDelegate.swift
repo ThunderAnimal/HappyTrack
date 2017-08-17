@@ -118,6 +118,10 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate, UNUse
             //Stop all registered Notification
             notificationHelper.unscheduleLocalNotications()
             
+            if(onNotification){
+                notificationHelper.pushLocalNotification(identifier: "NotificationChange", title: "Setup Reminder", body: "Remeinder: From " + String(startHour) + " to " + String(endHour) + " each " + String(interval) + " Hours")
+            }
+            
             //If Notification on than register new Notifications time
             if(onNotification){
                 notificationHelper.registerLocalNotification(startHour: startHour, endHour: endHour, interval: interval)

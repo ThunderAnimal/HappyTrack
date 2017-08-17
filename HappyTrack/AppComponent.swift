@@ -13,9 +13,11 @@ class AppComponent{
     private var watchConnectivityController: WatchConnectivityController?
     private var notificationController: NotificationController?
     private var healthController: HealthController?
+    private var dataController: DataController?
     
     private init(){}
     
+
     public func getWatchConnectivityController() -> WatchConnectivityController{
         if(watchConnectivityController == nil){
             watchConnectivityController = WatchConnectivityController()
@@ -35,5 +37,12 @@ class AppComponent{
             healthController = HealthController()
         }
         return healthController!
+    }
+    
+    public func getDataController() -> DataController{
+        if(dataController == nil){
+            dataController = DataController()
+        }
+        return dataController!
     }
 }
