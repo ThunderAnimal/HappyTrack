@@ -12,6 +12,17 @@
 		381834521F45806600C1A6A5 /* OnBoardNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834511F45806600C1A6A5 /* OnBoardNameViewController.swift */; };
 		381834541F45808100C1A6A5 /* OnBoardsNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834531F45808100C1A6A5 /* OnBoardsNotificationViewController.swift */; };
 		381834561F4580A800C1A6A5 /* OnBoardGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834551F4580A800C1A6A5 /* OnBoardGoalsViewController.swift */; };
+		381834581F48829700C1A6A5 /* FriendlyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834571F48829600C1A6A5 /* FriendlyHelper.swift */; };
+		3818345B1F48877500C1A6A5 /* TrackInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818345A1F48877500C1A6A5 /* TrackInterfaceController.swift */; };
+		3818345D1F489D7900C1A6A5 /* IconGroupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818345C1F489D7900C1A6A5 /* IconGroupButton.swift */; };
+		3818345F1F498DF400C1A6A5 /* TrackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818345E1F498DF400C1A6A5 /* TrackData.swift */; };
+		381834601F498DF400C1A6A5 /* TrackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818345E1F498DF400C1A6A5 /* TrackData.swift */; };
+		381834621F49A93F00C1A6A5 /* TrackHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834611F49A93F00C1A6A5 /* TrackHelper.swift */; };
+		381834641F4A1A1000C1A6A5 /* StateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834631F4A1A1000C1A6A5 /* StateInterfaceController.swift */; };
+		381834661F4A2FF400C1A6A5 /* TrackDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834651F4A2FF300C1A6A5 /* TrackDataEntity.swift */; };
+		381834681F4A301900C1A6A5 /* TrackDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834671F4A301900C1A6A5 /* TrackDataHandler.swift */; };
+		3818346A1F4A344D00C1A6A5 /* TrackDataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834691F4A344D00C1A6A5 /* TrackDataConverter.swift */; };
+		3818346F1F4A496E00C1A6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6631F2FA43C00C6248B /* Assets.xcassets */; };
 		381FE64D1F2FA43C00C6248B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE64C1F2FA43C00C6248B /* AppDelegate.swift */; };
 		381FE6521F2FA43C00C6248B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6501F2FA43C00C6248B /* Main.storyboard */; };
 		381FE6541F2FA43C00C6248B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6531F2FA43C00C6248B /* Assets.xcassets */; };
@@ -114,6 +125,15 @@
 		381834511F45806600C1A6A5 /* OnBoardNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardNameViewController.swift; sourceTree = "<group>"; };
 		381834531F45808100C1A6A5 /* OnBoardsNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardsNotificationViewController.swift; sourceTree = "<group>"; };
 		381834551F4580A800C1A6A5 /* OnBoardGoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardGoalsViewController.swift; sourceTree = "<group>"; };
+		381834571F48829600C1A6A5 /* FriendlyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendlyHelper.swift; sourceTree = "<group>"; };
+		3818345A1F48877500C1A6A5 /* TrackInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackInterfaceController.swift; sourceTree = "<group>"; };
+		3818345C1F489D7900C1A6A5 /* IconGroupButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconGroupButton.swift; sourceTree = "<group>"; };
+		3818345E1F498DF400C1A6A5 /* TrackData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackData.swift; sourceTree = "<group>"; };
+		381834611F49A93F00C1A6A5 /* TrackHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackHelper.swift; sourceTree = "<group>"; };
+		381834631F4A1A1000C1A6A5 /* StateInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateInterfaceController.swift; sourceTree = "<group>"; };
+		381834651F4A2FF300C1A6A5 /* TrackDataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDataEntity.swift; sourceTree = "<group>"; };
+		381834671F4A301900C1A6A5 /* TrackDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDataHandler.swift; sourceTree = "<group>"; };
+		381834691F4A344D00C1A6A5 /* TrackDataConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDataConverter.swift; sourceTree = "<group>"; };
 		381FE6491F2FA43C00C6248B /* HappyTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		381FE64C1F2FA43C00C6248B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		381FE6511F2FA43C00C6248B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -204,6 +224,14 @@
 			name = onboard;
 			sourceTree = "<group>";
 		};
+		381834591F4886FF00C1A6A5 /* track */ = {
+			isa = PBXGroup;
+			children = (
+				3818345A1F48877500C1A6A5 /* TrackInterfaceController.swift */,
+			);
+			name = track;
+			sourceTree = "<group>";
+		};
 		381FE6401F2FA43B00C6248B = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +309,7 @@
 			children = (
 				381FE64C1F2FA43C00C6248B /* AppDelegate.swift */,
 				38D8D3BE1F33329700A456CA /* application */,
-				38D8D3BC1F3331BB00A456CA /* model */,
+				38D8D3BC1F3331BB00A456CA /* data */,
 				38D8D3BB1F33314600A456CA /* support */,
 				381FE68F1F30FFB900C6248B /* view */,
 			);
@@ -311,11 +339,15 @@
 			name = support;
 			sourceTree = "<group>";
 		};
-		38D8D3BC1F3331BB00A456CA /* model */ = {
+		38D8D3BC1F3331BB00A456CA /* data */ = {
 			isa = PBXGroup;
 			children = (
+				3818345E1F498DF400C1A6A5 /* TrackData.swift */,
+				381834651F4A2FF300C1A6A5 /* TrackDataEntity.swift */,
+				381834671F4A301900C1A6A5 /* TrackDataHandler.swift */,
+				381834691F4A344D00C1A6A5 /* TrackDataConverter.swift */,
 			);
-			name = model;
+			name = data;
 			sourceTree = "<group>";
 		};
 		38D8D3BE1F33329700A456CA /* application */ = {
@@ -373,8 +405,11 @@
 		38DB7BC51F31DE9F00A04A40 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				381834591F4886FF00C1A6A5 /* track */,
 				38DB7BC81F31E3B300A04A40 /* StartInterfaceController.swift */,
 				38DB7BCA1F31E3CF00A04A40 /* ClickViewController.swift */,
+				3818345C1F489D7900C1A6A5 /* IconGroupButton.swift */,
+				381834631F4A1A1000C1A6A5 /* StateInterfaceController.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -383,6 +418,8 @@
 			isa = PBXGroup;
 			children = (
 				38D8D3D31F3B641A00A456CA /* NotificationHelper.swift */,
+				381834571F48829600C1A6A5 /* FriendlyHelper.swift */,
+				381834611F49A93F00C1A6A5 /* TrackHelper.swift */,
 			);
 			name = app;
 			sourceTree = "<group>";
@@ -541,6 +578,7 @@
 			files = (
 				381FE6571F2FA43C00C6248B /* LaunchScreen.storyboard in Resources */,
 				381FE6541F2FA43C00C6248B /* Assets.xcassets in Resources */,
+				3818346F1F4A496E00C1A6A5 /* Assets.xcassets in Resources */,
 				381FE6521F2FA43C00C6248B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,10 +676,12 @@
 			files = (
 				381834541F45808100C1A6A5 /* OnBoardsNotificationViewController.swift in Sources */,
 				38D8D3CD1F34C24B00A456CA /* NotificationController.swift in Sources */,
+				3818346A1F4A344D00C1A6A5 /* TrackDataConverter.swift in Sources */,
 				381FE69E1F31A5D100C6248B /* HealthController.swift in Sources */,
 				38D8D3D71F3C72F900A456CA /* TabBarViewController.swift in Sources */,
 				38D8D3E91F3C9E9700A456CA /* ISettingView.swift in Sources */,
 				38D8D3EF1F3C9ED300A456CA /* SettingPresenter.swift in Sources */,
+				381834661F4A2FF400C1A6A5 /* TrackDataEntity.swift in Sources */,
 				38DB7BB81F31CD7D00A04A40 /* OnboardViewController.swift in Sources */,
 				381FE69A1F31A58600C6248B /* AppComponent.swift in Sources */,
 				3818344F1F444B3300C1A6A5 /* DataController.swift in Sources */,
@@ -651,12 +691,14 @@
 				381FE6911F30FFCE00C6248B /* AppColor.swift in Sources */,
 				38D8D3F11F3C9EED00A456CA /* HistoriePresenter.swift in Sources */,
 				38D8D3DB1F3C73E300A456CA /* HappyTrackViewController.swift in Sources */,
+				3818345F1F498DF400C1A6A5 /* TrackData.swift in Sources */,
 				38D8D3ED1F3C9EC400A456CA /* IHappyTrackView.swift in Sources */,
 				381FE69C1F31A5B200C6248B /* WatchConnectivityController.swift in Sources */,
 				3818342F1F43404400C1A6A5 /* SettingViewController.swift in Sources */,
 				381834561F4580A800C1A6A5 /* OnBoardGoalsViewController.swift in Sources */,
 				38D8D3F31F3C9F0700A456CA /* HappyTrackPresenter.swift in Sources */,
 				38D8D3EB1F3C9EA200A456CA /* IHistorieView.swift in Sources */,
+				381834681F4A301900C1A6A5 /* TrackDataHandler.swift in Sources */,
 				38D8D3D91F3C73CE00A456CA /* HistorieController.swift in Sources */,
 				38D8D3C21F33346400A456CA /* Constants.swift in Sources */,
 				381834521F45806600C1A6A5 /* OnBoardNameViewController.swift in Sources */,
@@ -668,11 +710,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				38DB7BC91F31E3B300A04A40 /* StartInterfaceController.swift in Sources */,
+				381834621F49A93F00C1A6A5 /* TrackHelper.swift in Sources */,
 				38DB7BCB1F31E3CF00A04A40 /* ClickViewController.swift in Sources */,
+				3818345D1F489D7900C1A6A5 /* IconGroupButton.swift in Sources */,
 				381FE6761F2FA43C00C6248B /* NotificationController.swift in Sources */,
+				3818345B1F48877500C1A6A5 /* TrackInterfaceController.swift in Sources */,
+				381834601F498DF400C1A6A5 /* TrackData.swift in Sources */,
 				381FE6741F2FA43C00C6248B /* ExtensionDelegate.swift in Sources */,
+				381834581F48829700C1A6A5 /* FriendlyHelper.swift in Sources */,
 				38D8D3C51F333A3A00A456CA /* Constants.swift in Sources */,
 				38D8D3D41F3B641A00A456CA /* NotificationHelper.swift in Sources */,
+				381834641F4A1A1000C1A6A5 /* StateInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

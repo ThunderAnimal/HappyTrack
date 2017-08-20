@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import WatchKit
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
 
     var window: UIWindow?
     let watchConnectivityController = AppComponent.instance.getWatchConnectivityController()
@@ -22,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.setUpAppearance()
 
         //----- INIT WCSession
-        watchConnectivityController.iniSession()
+        watchConnectivityController.iniSession(delegate: self)
         
         //GET Permission Notifications
         AppComponent.instance.getNotificationController().initNotificationSetupCheck()
@@ -34,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //----- CHECK IF first Start
         let userDefaults = UserDefaults()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if(userDefaults.bool(forKey: Constants.General.onboardingApp.key())){
+        if(!userDefaults.bool(forKey: Constants.General.onboardingApp.key())){
             //int Values for First Start
             AppComponent.instance.getDataController().setDeftaultValues()
             
@@ -54,6 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        NotificationCenter.default.post(name: NSNotification.Name(Constants.General.appDidEnterBackground.key()), object: nil)
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -66,6 +69,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    //WCSession Delegate
+    
+    /**
+        Receive Data
+    */
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        if let date = userInfo[Constants.TrackValues.date.key()] as? Date,
+            let context = userInfo[Constants.TrackValues.conetxt.key()] as? String,
+            let feeling = userInfo[Constants.TrackValues.feeling.key()] as? String,
+            let ownBehavior = userInfo[Constants.TrackValues.ownBehavior.key()] as? String,
+            let otherBehavior = userInfo[Constants.TrackValues.otherBehavior.key()] as? String,
+            let didSport = userInfo[Constants.TrackValues.didSport.key()] as? Bool,
+            let minPuls = userInfo[Constants.TrackValues.minPuls.key()] as? Int,
+            let maxPuls = userInfo[Constants.TrackValues.maxPuls.key()] as? Int,
+            let countSteps = userInfo[Constants.TrackValues.stepCount.key()] as? Int{
+            
+            let trackDataHandler = AppComponent.instance.getTrackDataController()
+            let trackData = TrackData(date: date, context: context, feeling: feeling, ownBehavior: ownBehavior, otherBehavior: otherBehavior, didSport: didSport, minPuls: minPuls, maxPuls: maxPuls, stepCount: countSteps)
+            
+            trackDataHandler.addTrackData(trackData: trackData)
+        }
+    }
+    
+    /**
+        Receive Message
+    */
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        
+    }
+    
+    /**
+        Receive Context
+    */
+    
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        
+    }
+    
+    func session(_ session: WCSession,
+                 activationDidCompleteWith activationState: WCSessionActivationState,
+                 error: Error?){
+        
+    }
+    func sessionDidBecomeInactive(_ session: WCSession){
+        
+    }
+    func sessionDidDeactivate(_ session: WCSession){
+        
     }
     
     //OWN FUNCTIONS

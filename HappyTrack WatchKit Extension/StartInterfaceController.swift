@@ -38,6 +38,9 @@ class StartInterfaceController: WKInterfaceController {
         super.didDeactivate()
         notificationCenter.removeObserver(self)
     }
+    @IBAction func clickStartTrack() {
+        self.presentController(withName: "Track_Controller", context: "startTrack")
+    }
     
     private func setupNotificationCenter(){
         notificationCenter.addObserver(forName: NSNotification.Name(Constants.WatchNotification.contextReceived.key()), object: nil, queue: nil, using: { _ in

@@ -20,15 +20,35 @@ class SettingsViewController: UITableViewController{
     @IBOutlet weak var labelNotificationInterval: UILabel!
     @IBOutlet weak var switchNotification: UISwitch!
     
+    var NotificationSettingsChange = false
+    lazy var notificationCenter: NotificationCenter = {
+        return NotificationCenter.default
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        
+        notificationCenter.addObserver(forName: NSNotification.Name(Constants.General.appDidEnterBackground.key()), object: nil, queue: nil) { _ in
+            print("TEST")
+            if(self.NotificationSettingsChange){
+                self.notifyUserNotificaionCange()
+                self.NotificationSettingsChange = false
+            }
+        }
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateUI()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if(self.NotificationSettingsChange){
+            self.notifyUserNotificaionCange()
+            self.NotificationSettingsChange = false
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -180,12 +200,35 @@ class SettingsViewController: UITableViewController{
     }
     
     private func registerNotificationOnWatch(){
+        self.NotificationSettingsChange = true
         let data = AppComponent.instance.getDataController().getDataSendRegisterNotification()
-        
         AppComponent.instance.getWatchConnectivityController().sendData(data: data) { (success, errMsg) in
             if(!success){
                 print(errMsg)
             }
         }
+    }
+    
+    private func notifyUserNotificaionCange(){
+        let userDefaults = UserDefaults()
+        
+        let textFrom = "From " + userDefaults.string(forKey: Constants.RegisterLocalNotification.from.key())! + ":00"
+        let textTo = " to " + userDefaults.string(forKey: Constants.RegisterLocalNotification.to.key())! + ":00"
+        let textEvery = " every " + userDefaults.string(forKey: Constants.RegisterLocalNotification.interval.key())! + " Hours"
+
+        let textReminder = "Remeinder:  " + textFrom + textTo + textEvery
+        let data = [
+            Constants.PushLocalNotification.identifier.key(): "NotificationChange",
+            Constants.PushLocalNotification.title.key(): "Setup Reminder",
+            Constants.PushLocalNotification.body.key(): textReminder
+        ]
+        
+        
+        AppComponent.instance.getWatchConnectivityController().sendData(data: data, callback:
+            {(success, errMsg) -> Void in
+                if(!success){
+                    print(errMsg)
+                }
+        })
     }
 }

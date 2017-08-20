@@ -11,7 +11,7 @@ import WatchConnectivity
 import UserNotifications
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate, UNUserNotificationCenterDelegate {
-
+    
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
         setupWatchConnectivity()
@@ -85,10 +85,10 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate, UNUse
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         
     }
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
         //Receive UserName
-        if let name = applicationContext[Constants.Person.name.key()] as? String,
-            let lastname = applicationContext[Constants.Person.last_name.key()] as? String {
+        if let name = userInfo[Constants.Person.name.key()] as? String,
+            let lastname = userInfo[Constants.Person.last_name.key()] as? String {
             
             let userDefaults = UserDefaults.standard
             
@@ -98,34 +98,30 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate, UNUse
             NotificationCenter.default.post(name: NSNotification.Name(Constants.WatchNotification.contextReceived.key()), object: nil)
         }
         
-        //Receive PushNotification
-        if let identifier = applicationContext[Constants.PushLocalNotification.identifier.key()] as? String,
-            let title = applicationContext[Constants.PushLocalNotification.title.key()] as? String,
-            let body = applicationContext[Constants.PushLocalNotification.body.key()] as? String{
-            
-            let notificationHelper = NotificationHelper()
-            notificationHelper.pushLocalNotification(identifier: identifier, title: title, body: body)
-        }
-        
         //Receive RegisterNoktification
-        if let startHour = applicationContext[Constants.RegisterLocalNotification.from.key()] as? Int,
-            let endHour = applicationContext[Constants.RegisterLocalNotification.to.key()] as? Int,
-            let interval = applicationContext[Constants.RegisterLocalNotification.interval.key()] as? Int,
-            let onNotification = applicationContext[Constants.RegisterLocalNotification.on.key()] as? Bool{
+        if let startHour = userInfo[Constants.RegisterLocalNotification.from.key()] as? Int,
+            let endHour = userInfo[Constants.RegisterLocalNotification.to.key()] as? Int,
+            let interval = userInfo[Constants.RegisterLocalNotification.interval.key()] as? Int,
+            let onNotification = userInfo[Constants.RegisterLocalNotification.on.key()] as? Bool{
             
             let notificationHelper = NotificationHelper()
             
             //Stop all registered Notification
             notificationHelper.unscheduleLocalNotications()
             
-            if(onNotification){
-                notificationHelper.pushLocalNotification(identifier: "NotificationChange", title: "Setup Reminder", body: "Remeinder: From " + String(startHour) + " to " + String(endHour) + " each " + String(interval) + " Hours")
-            }
-            
             //If Notification on than register new Notifications time
             if(onNotification){
                 notificationHelper.registerLocalNotification(startHour: startHour, endHour: endHour, interval: interval)
             }
+        }
+        
+        //Receive PushNotification
+        if let identifier = userInfo[Constants.PushLocalNotification.identifier.key()] as? String,
+            let title = userInfo[Constants.PushLocalNotification.title.key()] as? String,
+            let body = userInfo[Constants.PushLocalNotification.body.key()] as? String{
+            
+            let notificationHelper = NotificationHelper()
+            notificationHelper.pushLocalNotification(identifier: identifier, title: title, body: body)
         }
     }
     
@@ -138,10 +134,8 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate, UNUse
     //Will triggerd when Response by notification
     public func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         if(response.notification.request.content.categoryIdentifier == Constants.NotificationCategory.happytrack_needed.indentifier()){
-            /*if(response.actionIdentifier == Constants.NotificationAction.track_action.indentifier()){
-                //Open Tracking Page
- 
-            }*/
+            //Open Track Screen when App is active
+            WKExtension.shared().rootInterfaceController?.presentController(withName: "Track_Controller", context: "startTrack")
         }
     }
 

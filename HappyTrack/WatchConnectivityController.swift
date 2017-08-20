@@ -10,7 +10,7 @@ import Foundation
 import WatchKit
 import WatchConnectivity
 
-class WatchConnectivityController: NSObject, WCSessionDelegate{
+class WatchConnectivityController: NSObject{
     private let session: WCSession? = WCSession.isSupported() ? WCSession.default() : nil
     
     
@@ -21,14 +21,14 @@ class WatchConnectivityController: NSObject, WCSessionDelegate{
     /**
         Init Session
     */
-    public func iniSession(){
+    public func iniSession(delegate: WCSessionDelegate) -> Bool{
         guard WCSession.isSupported() else{
-            return
+            return false
         }
         
-        self.session?.delegate = self
+        self.session?.delegate = delegate
         self.session?.activate()
-        
+        return true
     }
     
     /**
@@ -48,20 +48,23 @@ class WatchConnectivityController: NSObject, WCSessionDelegate{
             return
         }
         
-        session.activate()
         if(session.isWatchAppInstalled == false){
             callback(false, "App is not installed on Apple Watch. Please installe the App")
             return
         }
         
-        do{
-            try session.updateApplicationContext(data)
+        session.transferUserInfo(data)
+        callback(true, "All Done.")
+        
+        /*do{
+         
+            //try session.updateApplicationContext(data)
     
             callback(true, "All Done.")
         } catch {
             callback(false, "Unable to send application context: \(error)")
             print(error)
-        }
+        }*/
     }
     
     
@@ -77,7 +80,6 @@ class WatchConnectivityController: NSObject, WCSessionDelegate{
             return
         }
         
-        session.activate()
         if(!session.isPaired){
             callback(false, "Apple Watch not paired")
             return
@@ -96,21 +98,5 @@ class WatchConnectivityController: NSObject, WCSessionDelegate{
         }
         
         callback(true, "All Done.")
-    }
-    
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        
-    }
-    
-    func session(_ session: WCSession,
-                 activationDidCompleteWith activationState: WCSessionActivationState,
-                 error: Error?){
-        
-    }
-    func sessionDidBecomeInactive(_ session: WCSession){
-        
-    }
-    func sessionDidDeactivate(_ session: WCSession){
-        
     }
 }

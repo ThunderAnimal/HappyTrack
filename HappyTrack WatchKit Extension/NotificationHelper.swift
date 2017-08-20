@@ -15,7 +15,7 @@ class NotificationHelper: NSObject {
     public func initSetUpNotifications(){
         let generalCategory = UNNotificationCategory(identifier: Constants.NotificationCategory.general.indentifier(),actions: [],intentIdentifiers: [],options: .customDismissAction)
         
-        /*let trackAction = UNNotificationAction(identifier: Constants.NotificationAction.track_action.indentifier(), title: "Track Happiness", options: UNNotificationActionOptions(rawValue: 0))*/
+        //let trackAction = UNNotificationAction(identifier: Constants.NotificationAction.track_action.indentifier(), title: "Track Happiness", options: UNNotificationActionOptions(rawValue: 0))
         let trackHappiness = UNNotificationCategory(identifier: Constants.NotificationCategory.happytrack_needed.indentifier(), actions: [], intentIdentifiers: [], options: .customDismissAction)
         
         let center = UNUserNotificationCenter.current()

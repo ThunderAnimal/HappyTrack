@@ -14,6 +14,7 @@ class AppComponent{
     private var notificationController: NotificationController?
     private var healthController: HealthController?
     private var dataController: DataController?
+    private var trackDataHandler: TrackDataHandler?
     
     private init(){}
     
@@ -44,5 +45,12 @@ class AppComponent{
             dataController = DataController()
         }
         return dataController!
+    }
+    
+    public func getTrackDataController() -> TrackDataHandler{
+        if(trackDataHandler == nil){
+            trackDataHandler = TrackDataHandler()
+        }
+        return trackDataHandler!
     }
 }

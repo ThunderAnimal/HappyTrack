@@ -8,6 +8,7 @@
 
 import Foundation
 class DataController{
+    
     public func setDeftaultValues() -> Void{
         let userDefaults = UserDefaults()
         userDefaults.set(true, forKey: Constants.RegisterLocalNotification.on.key())
@@ -24,7 +25,7 @@ class DataController{
                 ]
             return data
         }else{
-            return [String:String]()
+            return [String:Any]()
         }
     }
     
@@ -39,4 +40,5 @@ class DataController{
         
         return data;
     }
+    
 }
