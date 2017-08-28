@@ -88,9 +88,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             let countSteps = userInfo[Constants.TrackValues.stepCount.key()] as? Int{
             
             let trackDataHandler = AppComponent.instance.getTrackDataController()
-            let trackData = TrackData(date: date, context: context, feeling: feeling, ownBehavior: ownBehavior, otherBehavior: otherBehavior, didSport: didSport, minPuls: minPuls, maxPuls: maxPuls, stepCount: countSteps)
             
-            trackDataHandler.addTrackData(trackData: trackData)
+            let calendar = Calendar.current
+            let dateFormatDay = DateFormatter()
+            dateFormatDay.dateFormat = "dd.MM.yyyy"
+            
+            let hour = calendar.component(.hour, from: date)
+            let minutes = calendar.component(.minute, from: date)
+            
+            let trackDataTime = String(hour) + ":" + String(minutes)
+            let trackDataDate = dateFormatDay.string(from: date)
+            
+            let trackDatatEntity = TrackDataEntity(realDate: date,date: trackDataDate, time: trackDataTime, context: context, feeling: feeling, ownBehavior: ownBehavior, otherBehavior: otherBehavior, didSport: didSport, minPuls: minPuls, maxPuls: maxPuls, stepCount: countSteps)
+            
+            trackDataHandler.addTrackData(trackData: trackDatatEntity)
         }
     }
     

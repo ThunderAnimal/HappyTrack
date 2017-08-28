@@ -10,23 +10,17 @@ import Foundation
 import RealmSwift
 
 class TrackDataHandler{
-    private let converter: TrackDataConverter
-    
-    init(){
-        converter = TrackDataConverter()
-    }
-    
-    public func addTrackData(trackData:TrackData){
+    public func addTrackData(trackData:TrackDataEntity){
         let realm = try! Realm()
         try! realm.write{
-            realm.add(converter.to(value: trackData))
+            realm.add(trackData)
         }
     }
     
-    public func getLastTrackData() -> TrackData?{
+    public func getLastTrackData() -> TrackDataEntity?{
         let realm = try! Realm()
         if let res = realm.objects(TrackDataEntity.self).last{
-            return converter.from(value: res)
+            return res
         }else{
             return nil
         }

@@ -39,26 +39,4 @@ class TrackData{
         self.maxPuls = maxPuls
         self.stepCount = stepCount
     }
-    required init(  date:Date,
-                    context:String,
-                  feeling:String,
-                  ownBehavior:String,
-                  otherBehavior: String,
-                  didSport: Bool,
-                  minPuls: Int,
-                  maxPuls: Int,
-                  stepCount: Int) {
-        self.date = date
-        self.context = context
-        self.feeling = feeling
-        self.ownBehavior = ownBehavior
-        self.otherBehavior = otherBehavior
-        self.didSport = didSport
-        self.minPuls = minPuls
-        self.maxPuls = maxPuls
-        self.stepCount = stepCount
-    }
-
-    
-    
 }

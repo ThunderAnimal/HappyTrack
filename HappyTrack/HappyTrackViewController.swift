@@ -51,15 +51,9 @@ class HappyTrackViewController: UIViewController {
                 case Constants.TrackFeeling.anger.key(): imgState.image = UIImage(named: "mad")
                 default: imgState.image = UIImage(named: "smiling")
             }
-            let calendar = Calendar.current
-            let dateFormatDay = DateFormatter()
-            dateFormatDay.dateFormat = "dd.MM.yyyy"
             
-            let hour = calendar.component(.hour, from: lastData.date)
-            let minutes = calendar.component(.minute, from: lastData.date)
-            
-            self.inputLastTrackTime.text = String(hour) + ":" + String(minutes)
-            self.inputLastTrackDate.text = dateFormatDay.string(from: lastData.date)
+            self.inputLastTrackTime.text = lastData.time
+            self.inputLastTrackDate.text = lastData.date
         }else{
             self.inputLastTrackTime.text = "NO TRACK DATA"
             self.inputLastTrackDate.text = ""

@@ -21,7 +21,6 @@
 		381834641F4A1A1000C1A6A5 /* StateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834631F4A1A1000C1A6A5 /* StateInterfaceController.swift */; };
 		381834661F4A2FF400C1A6A5 /* TrackDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834651F4A2FF300C1A6A5 /* TrackDataEntity.swift */; };
 		381834681F4A301900C1A6A5 /* TrackDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834671F4A301900C1A6A5 /* TrackDataHandler.swift */; };
-		3818346A1F4A344D00C1A6A5 /* TrackDataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381834691F4A344D00C1A6A5 /* TrackDataConverter.swift */; };
 		3818346F1F4A496E00C1A6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6631F2FA43C00C6248B /* Assets.xcassets */; };
 		381FE64D1F2FA43C00C6248B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE64C1F2FA43C00C6248B /* AppDelegate.swift */; };
 		381FE6521F2FA43C00C6248B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381FE6501F2FA43C00C6248B /* Main.storyboard */; };
@@ -40,12 +39,13 @@
 		381FE69E1F31A5D100C6248B /* HealthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE69D1F31A5D100C6248B /* HealthController.swift */; };
 		381FE6A01F31AB6E00C6248B /* UIExtansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE69F1F31AB6E00C6248B /* UIExtansions.swift */; };
 		381FE6A21F31ABAD00C6248B /* convCGValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE6A11F31ABAD00C6248B /* convCGValues.swift */; };
+		3888A9071F54259400CDB3D1 /* HistorieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888A9061F54259400CDB3D1 /* HistorieDetailViewController.swift */; };
 		38D8D3C21F33346400A456CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3C11F33346400A456CA /* Constants.swift */; };
 		38D8D3C51F333A3A00A456CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3C11F33346400A456CA /* Constants.swift */; };
 		38D8D3CD1F34C24B00A456CA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3CC1F34C24B00A456CA /* NotificationController.swift */; };
 		38D8D3D41F3B641A00A456CA /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3D31F3B641A00A456CA /* NotificationHelper.swift */; };
 		38D8D3D71F3C72F900A456CA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3D61F3C72F900A456CA /* TabBarViewController.swift */; };
-		38D8D3D91F3C73CE00A456CA /* HistorieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3D81F3C73CE00A456CA /* HistorieController.swift */; };
+		38D8D3D91F3C73CE00A456CA /* HistorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3D81F3C73CE00A456CA /* HistorieViewController.swift */; };
 		38D8D3DB1F3C73E300A456CA /* HappyTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8D3DA1F3C73E300A456CA /* HappyTrackViewController.swift */; };
 		38D8D3DD1F3C9B3A00A456CA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8D3DC1F3C9B3A00A456CA /* Realm.framework */; };
 		38D8D3DE1F3C9B3A00A456CA /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8D3DC1F3C9B3A00A456CA /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -133,7 +133,6 @@
 		381834631F4A1A1000C1A6A5 /* StateInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateInterfaceController.swift; sourceTree = "<group>"; };
 		381834651F4A2FF300C1A6A5 /* TrackDataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDataEntity.swift; sourceTree = "<group>"; };
 		381834671F4A301900C1A6A5 /* TrackDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDataHandler.swift; sourceTree = "<group>"; };
-		381834691F4A344D00C1A6A5 /* TrackDataConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDataConverter.swift; sourceTree = "<group>"; };
 		381FE6491F2FA43C00C6248B /* HappyTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		381FE64C1F2FA43C00C6248B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		381FE6511F2FA43C00C6248B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,12 +158,13 @@
 		381FE69D1F31A5D100C6248B /* HealthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthController.swift; sourceTree = "<group>"; };
 		381FE69F1F31AB6E00C6248B /* UIExtansions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtansions.swift; sourceTree = "<group>"; };
 		381FE6A11F31ABAD00C6248B /* convCGValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = convCGValues.swift; sourceTree = "<group>"; };
+		3888A9061F54259400CDB3D1 /* HistorieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorieDetailViewController.swift; sourceTree = "<group>"; };
 		38D28213CB1898CB7C004E41 /* Pods_HappyTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D8D3C11F33346400A456CA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38D8D3CC1F34C24B00A456CA /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		38D8D3D31F3B641A00A456CA /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		38D8D3D61F3C72F900A456CA /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		38D8D3D81F3C73CE00A456CA /* HistorieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorieController.swift; sourceTree = "<group>"; };
+		38D8D3D81F3C73CE00A456CA /* HistorieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorieViewController.swift; sourceTree = "<group>"; };
 		38D8D3DA1F3C73E300A456CA /* HappyTrackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappyTrackViewController.swift; sourceTree = "<group>"; };
 		38D8D3DC1F3C9B3A00A456CA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		38D8D3E01F3C9B4100A456CA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
@@ -345,7 +345,6 @@
 				3818345E1F498DF400C1A6A5 /* TrackData.swift */,
 				381834651F4A2FF300C1A6A5 /* TrackDataEntity.swift */,
 				381834671F4A301900C1A6A5 /* TrackDataHandler.swift */,
-				381834691F4A344D00C1A6A5 /* TrackDataConverter.swift */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -365,9 +364,10 @@
 		38D8D3E41F3C9E3F00A456CA /* historie */ = {
 			isa = PBXGroup;
 			children = (
-				38D8D3D81F3C73CE00A456CA /* HistorieController.swift */,
+				38D8D3D81F3C73CE00A456CA /* HistorieViewController.swift */,
 				38D8D3EA1F3C9EA200A456CA /* IHistorieView.swift */,
 				38D8D3F01F3C9EED00A456CA /* HistoriePresenter.swift */,
+				3888A9061F54259400CDB3D1 /* HistorieDetailViewController.swift */,
 			);
 			name = historie;
 			sourceTree = "<group>";
@@ -676,12 +676,12 @@
 			files = (
 				381834541F45808100C1A6A5 /* OnBoardsNotificationViewController.swift in Sources */,
 				38D8D3CD1F34C24B00A456CA /* NotificationController.swift in Sources */,
-				3818346A1F4A344D00C1A6A5 /* TrackDataConverter.swift in Sources */,
 				381FE69E1F31A5D100C6248B /* HealthController.swift in Sources */,
 				38D8D3D71F3C72F900A456CA /* TabBarViewController.swift in Sources */,
 				38D8D3E91F3C9E9700A456CA /* ISettingView.swift in Sources */,
 				38D8D3EF1F3C9ED300A456CA /* SettingPresenter.swift in Sources */,
 				381834661F4A2FF400C1A6A5 /* TrackDataEntity.swift in Sources */,
+				3888A9071F54259400CDB3D1 /* HistorieDetailViewController.swift in Sources */,
 				38DB7BB81F31CD7D00A04A40 /* OnboardViewController.swift in Sources */,
 				381FE69A1F31A58600C6248B /* AppComponent.swift in Sources */,
 				3818344F1F444B3300C1A6A5 /* DataController.swift in Sources */,
@@ -699,7 +699,7 @@
 				38D8D3F31F3C9F0700A456CA /* HappyTrackPresenter.swift in Sources */,
 				38D8D3EB1F3C9EA200A456CA /* IHistorieView.swift in Sources */,
 				381834681F4A301900C1A6A5 /* TrackDataHandler.swift in Sources */,
-				38D8D3D91F3C73CE00A456CA /* HistorieController.swift in Sources */,
+				38D8D3D91F3C73CE00A456CA /* HistorieViewController.swift in Sources */,
 				38D8D3C21F33346400A456CA /* Constants.swift in Sources */,
 				381834521F45806600C1A6A5 /* OnBoardNameViewController.swift in Sources */,
 			);
