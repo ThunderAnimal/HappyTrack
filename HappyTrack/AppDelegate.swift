@@ -96,7 +96,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             let hour = calendar.component(.hour, from: date)
             let minutes = calendar.component(.minute, from: date)
             
-            let trackDataTime = String(hour) + ":" + String(minutes)
+            var stringMinutes = String(minutes)
+            if(minutes < 10){
+                stringMinutes = "0" + stringMinutes
+            }
+            var stringHours = String(hour)
+            if(hour < 10){
+                stringHours = "0" + stringHours
+            }
+            
+            let trackDataTime = stringHours + ":" + stringMinutes
             let trackDataDate = dateFormatDay.string(from: date)
             
             let trackDatatEntity = TrackDataEntity(realDate: date,date: trackDataDate, time: trackDataTime, context: context, feeling: feeling, ownBehavior: ownBehavior, otherBehavior: otherBehavior, didSport: didSport, minPuls: minPuls, maxPuls: maxPuls, stepCount: countSteps)
