@@ -151,6 +151,7 @@ public enum Constants{
             case .relax: return "releax"
             case .music: return "music"
             case .television: return "television"
+            case .game: return "game"
             case .read: return "read"
             case .family: return "family"
             case .friends: return "friends"
