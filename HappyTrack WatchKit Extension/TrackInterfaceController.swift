@@ -438,7 +438,6 @@ class TrackInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate 
             if WCSession.isSupported()  {
                 WCSession.default().transferUserInfo(self.trackHelper.getTrackDataSend())
             }
-            
             //Close
             self.dismiss()
         }
@@ -531,7 +530,7 @@ class TrackInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate 
         }
     }
     
-    func retrieveStepCount(completion: @escaping (_ stepRetrieved: Int) -> Void) {
+    private func retrieveStepCount(completion: @escaping (_ stepRetrieved: Int) -> Void) {
         
         //   Define the Step Quantity Type
         let stepsCount = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)
@@ -572,9 +571,19 @@ class TrackInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate 
                 completion(0)
             }
         }
-        
         //Excute Query
-        healthStore.execute(query)
+        if(HKHealthStore.isHealthDataAvailable()){
+            healthStore.execute(query)
+        }else{
+            completion(0)
+            return
+        }
+        
+        //Auf WatchOS in simulator wird query nicht ausgeführt
+        #if (arch(i386) || arch(x86_64)) && os(watchOS)
+            completion(0)
+            return
+        #endif
     }
     
     // ******** GENERAL UI Funcions
