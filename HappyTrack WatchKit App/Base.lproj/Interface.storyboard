@@ -10,56 +10,6 @@
     </dependencies>
     <scenes>
         <!--HappyTrack-->
-        <scene sceneID="aou-V4-d1y">
-            <objects>
-                <controller title="HappyTrack" id="AgC-eL-Hgc" customClass="StartInterfaceController" customModule="HappyTrack_WatchKit_Extension">
-                    <items>
-                        <label width="134" alignment="left" text="Hey, " id="kU3-9f-Lp0"/>
-                        <label width="1" alignment="left" text="versuche nun auf der folgenden Seite das Element anzuklicken." numberOfLines="8" id="UMl-Qp-5Er"/>
-                        <imageView width="67" height="65" alignment="center" image="swipe-left" id="ZKN-1D-HCs"/>
-                    </items>
-                    <connections>
-                        <outlet property="usernameLabel" destination="kU3-9f-Lp0" id="YFI-id-qEr"/>
-                        <segue destination="kfX-kY-ViJ" kind="relationship" relationship="nextPage" id="HGq-qU-6ss"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="178" y="41"/>
-        </scene>
-        <!--Click-Challange-->
-        <scene sceneID="QkY-HE-S7v">
-            <objects>
-                <controller title="Click-Challange" id="kfX-kY-ViJ" customClass="ClickViewController" customModule="HappyTrack_WatchKit_Extension">
-                    <items>
-                        <group width="1" height="1" alignment="left" id="JjO-Ik-c23">
-                            <items>
-                                <button width="50" height="50" alignment="center" verticalAlignment="center" backgroundImage="icon" id="HM7-tt-8t7">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="backgroundColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="15"/>
-                                    <connections>
-                                        <action selector="clickButton" destination="kfX-kY-ViJ" id="KZT-9t-Txl"/>
-                                    </connections>
-                                </button>
-                            </items>
-                            <gestureRecognizers>
-                                <tapGestureRecognizer id="cRi-GQ-29j">
-                                    <connections>
-                                        <action selector="tapRecognized:" destination="kfX-kY-ViJ" id="iUS-yf-nKV"/>
-                                    </connections>
-                                </tapGestureRecognizer>
-                            </gestureRecognizers>
-                        </group>
-                    </items>
-                    <connections>
-                        <outlet property="btnClick" destination="HM7-tt-8t7" id="RmE-VX-SgA"/>
-                        <outlet property="tapGroup" destination="JjO-Ik-c23" id="dFh-NB-gFb"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="453" y="41"/>
-        </scene>
-        <!--HappyTrack-->
         <scene sceneID="uP4-Pj-HXN">
             <objects>
                 <controller title="HappyTrack" id="BlP-pI-Idz" customClass="StartInterfaceController" customModule="HappyTrack_WatchKit_Extension">
@@ -86,6 +36,7 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="motivatesLabel" destination="JXP-l1-c7y" id="2Xy-Za-qlU"/>
                         <outlet property="usernameLabel" destination="9vc-W3-93V" id="nwr-ct-Mjz"/>
                         <segue destination="aOJ-94-vp0" kind="relationship" relationship="nextPage" id="ApL-Gy-OEf"/>
                     </connections>
@@ -127,165 +78,326 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="bY3-9p-Gxq">
                             <items>
-                                <label alignment="left" text="What are you doing?" textAlignment="left" numberOfLines="3" id="LPc-NI-fRR">
-                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                </label>
-                                <group alignment="center" radius="0.0" id="kp9-0R-meB">
+                                <group width="1" alignment="left" layout="vertical" id="D0B-bt-a4R">
                                     <items>
-                                        <button alignment="left" id="W4F-LP-3Nx">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="eRl-al-bul">
-                                                <items>
-                                                    <imageView width="28" height="28" alignment="left" image="work" id="nCZ-Mb-cSC"/>
-                                                </items>
-                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
-                                            </group>
-                                            <connections>
-                                                <action selector="clickContextWork" destination="cbj-d1-3bR" id="MCQ-4X-Fpo"/>
-                                            </connections>
-                                        </button>
-                                        <button alignment="left" id="3XC-Ue-QZP">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="fLl-uZ-8hj">
-                                                <items>
-                                                    <imageView alignment="left" image="home" id="Pds-Kw-0Zg"/>
-                                                </items>
-                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
-                                            </group>
-                                            <connections>
-                                                <action selector="clickContextHome" destination="cbj-d1-3bR" id="3HJ-8K-W3C"/>
-                                            </connections>
-                                        </button>
-                                        <button alignment="left" id="egG-9X-2y6">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="Ucz-Xg-edJ">
-                                                <items>
-                                                    <imageView height="28" alignment="left" image="doctor" id="7TL-Np-FNT"/>
-                                                </items>
-                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
-                                            </group>
-                                            <connections>
-                                                <action selector="clickContexDoctor" destination="cbj-d1-3bR" id="vIF-dF-MYH"/>
-                                            </connections>
-                                        </button>
+                                        <group alignment="center" radius="0.0" id="kp9-0R-meB">
+                                            <items>
+                                                <button alignment="left" id="W4F-LP-3Nx">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="eRl-al-bul">
+                                                        <items>
+                                                            <imageView alignment="left" image="work" id="nCZ-Mb-cSC"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickContextWork" destination="cbj-d1-3bR" id="MCQ-4X-Fpo"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="left" id="3XC-Ue-QZP">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="fLl-uZ-8hj">
+                                                        <items>
+                                                            <imageView alignment="left" image="home" id="Pds-Kw-0Zg"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickContextHome" destination="cbj-d1-3bR" id="3HJ-8K-W3C"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="left" id="egG-9X-2y6">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="Ucz-Xg-edJ">
+                                                        <items>
+                                                            <imageView alignment="left" image="doctor" id="7TL-Np-FNT"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickContexDoctor" destination="cbj-d1-3bR" id="vIF-dF-MYH"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
+                                        <group alignment="center" radius="0.0" id="H4Y-h3-6xu">
+                                            <items>
+                                                <button alignment="left" id="Gjm-Sn-J9a">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="b3T-nf-aA6">
+                                                        <items>
+                                                            <imageView alignment="left" image="sport" id="suz-M1-krx"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickContextSport" destination="cbj-d1-3bR" id="LcP-rC-3Mg"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="left" id="9R5-NF-kB3">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="Zys-Wd-14K">
+                                                        <items>
+                                                            <imageView alignment="left" image="relax" id="NZ8-Q0-6Ql"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickContextReleax" destination="cbj-d1-3bR" id="JRW-1d-Ba7"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="left" id="1CT-FC-5w4">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="De7-KX-qij">
+                                                        <items>
+                                                            <imageView alignment="left" image="music" id="TSt-cE-VYV"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickContextMusic" destination="cbj-d1-3bR" id="Ai2-JS-fvb"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
+                                        <group alignment="center" radius="0.0" id="rtF-bz-5Oz">
+                                            <items>
+                                                <button alignment="left" id="aEs-8h-VOb">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="u2n-XZ-hK1">
+                                                        <items>
+                                                            <imageView alignment="left" image="television" id="FfX-ZC-uXr"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickContextTv" destination="cbj-d1-3bR" id="GmP-OO-Jqi"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="left" id="uim-Rw-mzh">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="e1q-xc-NQa">
+                                                        <items>
+                                                            <imageView alignment="left" image="game" id="cRu-L2-byR"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickContextGame" destination="cbj-d1-3bR" id="aZc-dC-OlS"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="left" id="MRp-zG-Cq8">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="5s0-zJ-89X">
+                                                        <items>
+                                                            <imageView alignment="left" image="read" id="RD6-cK-bBU"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickContextRead" destination="cbj-d1-3bR" id="jkh-wT-Jax"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
+                                        <group alignment="center" radius="0.0" id="Bfk-Po-M9d">
+                                            <items>
+                                                <button alignment="left" id="omm-pl-wI8">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="DDY-if-de2">
+                                                        <items>
+                                                            <imageView alignment="left" image="family" id="zqh-MJ-766"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickContextFamilie" destination="cbj-d1-3bR" id="HOb-TF-lJm"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="left" id="9RC-eO-Wxx">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="Rzn-aJ-b6o">
+                                                        <items>
+                                                            <imageView alignment="left" image="friends" id="7OP-I2-74S"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickContextFriends" destination="cbj-d1-3bR" id="kEr-lD-DLA"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="left" id="QIC-Z9-ou4">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="1jo-fg-Iia">
+                                                        <items>
+                                                            <imageView alignment="left" image="shopping" id="y9Y-7x-3rd"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickContexShopping" destination="cbj-d1-3bR" id="uei-NL-8Yp"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
                                     </items>
                                 </group>
-                                <group alignment="center" radius="0.0" id="H4Y-h3-6xu">
+                                <group width="1" alignment="left" layout="vertical" spacing="2" id="Y5C-v2-8bX">
                                     <items>
-                                        <button alignment="left" id="Gjm-Sn-J9a">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="b3T-nf-aA6">
+                                        <button alignment="left" id="btA-lI-6PC">
+                                            <group key="contentGroup" width="1" alignment="left" id="Scu-Qu-whH">
                                                 <items>
-                                                    <imageView alignment="left" image="sport" id="suz-M1-krx"/>
+                                                    <imageView width="30" height="30" alignment="left" image="work" id="7Fc-Gp-Gya"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Work" textAlignment="center" numberOfLines="2" id="Bly-5G-7T7"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickContextSport" destination="cbj-d1-3bR" id="LcP-rC-3Mg"/>
+                                                <action selector="clickContextWork" destination="cbj-d1-3bR" id="j2h-QY-cgT"/>
                                             </connections>
                                         </button>
-                                        <button alignment="left" id="9R5-NF-kB3">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="Zys-Wd-14K">
+                                        <button alignment="left" id="7Vp-ZI-bYq">
+                                            <group key="contentGroup" width="1" alignment="left" id="ep2-XF-LEI">
                                                 <items>
-                                                    <imageView alignment="left" image="relax" id="NZ8-Q0-6Ql"/>
+                                                    <imageView width="30" height="30" alignment="left" image="home" id="ija-Nh-ZDS"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Home" textAlignment="center" numberOfLines="2" id="4G1-kg-DIx"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickContextReleax" destination="cbj-d1-3bR" id="JRW-1d-Ba7"/>
+                                                <action selector="clickContextHome" destination="cbj-d1-3bR" id="SoX-LL-9E3"/>
                                             </connections>
                                         </button>
-                                        <button alignment="left" id="1CT-FC-5w4">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="De7-KX-qij">
+                                        <button alignment="left" id="8de-RY-jyR">
+                                            <group key="contentGroup" width="1" alignment="left" id="sbr-wP-m8c">
                                                 <items>
-                                                    <imageView alignment="left" image="music" id="TSt-cE-VYV"/>
+                                                    <imageView width="30" height="30" alignment="left" image="doctor" id="guA-gz-3y8"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Doctor" textAlignment="center" numberOfLines="2" id="EYs-ad-zvn"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickContextMusic" destination="cbj-d1-3bR" id="Ai2-JS-fvb"/>
+                                                <action selector="clickContexDoctor" destination="cbj-d1-3bR" id="3p7-8o-vsU"/>
                                             </connections>
                                         </button>
-                                    </items>
-                                </group>
-                                <group alignment="center" radius="0.0" id="rtF-bz-5Oz">
-                                    <items>
-                                        <button alignment="left" id="aEs-8h-VOb">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="u2n-XZ-hK1">
+                                        <button alignment="left" id="zL4-46-Tv2">
+                                            <group key="contentGroup" width="1" alignment="left" id="kso-dM-MvQ">
                                                 <items>
-                                                    <imageView alignment="left" image="television" id="FfX-ZC-uXr"/>
+                                                    <imageView width="30" height="30" alignment="left" image="sport" id="QwW-Ti-chg"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Sport" textAlignment="center" numberOfLines="2" id="15D-Jc-snQ"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickContextTv" destination="cbj-d1-3bR" id="GmP-OO-Jqi"/>
+                                                <action selector="clickContextSport" destination="cbj-d1-3bR" id="AaK-J8-Wt1"/>
                                             </connections>
                                         </button>
-                                        <button alignment="left" id="uim-Rw-mzh">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="e1q-xc-NQa">
+                                        <button alignment="left" id="nLR-CA-m8L">
+                                            <group key="contentGroup" width="1" alignment="left" id="Ae4-4Z-4ew">
                                                 <items>
-                                                    <imageView alignment="left" image="game" id="cRu-L2-byR"/>
+                                                    <imageView width="30" height="30" alignment="left" image="relax" id="MAp-Vv-jGG"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Releax" textAlignment="center" numberOfLines="2" id="JwB-Su-Fc4"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickContextGame" destination="cbj-d1-3bR" id="aZc-dC-OlS"/>
+                                                <action selector="clickContextReleax" destination="cbj-d1-3bR" id="Zor-VA-wSM"/>
                                             </connections>
                                         </button>
-                                        <button alignment="left" id="MRp-zG-Cq8">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="5s0-zJ-89X">
+                                        <button alignment="left" id="sMG-p3-on8">
+                                            <group key="contentGroup" width="1" alignment="left" id="c8u-1w-Pll">
                                                 <items>
-                                                    <imageView height="28" alignment="left" image="read" id="RD6-cK-bBU"/>
+                                                    <imageView width="30" height="30" alignment="left" image="music" id="QCQ-dB-yfJ"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Music" textAlignment="center" numberOfLines="2" id="zTp-Lc-unR"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickContextRead" destination="cbj-d1-3bR" id="jkh-wT-Jax"/>
+                                                <action selector="clickContextMusic" destination="cbj-d1-3bR" id="hE8-z6-JfK"/>
                                             </connections>
                                         </button>
-                                    </items>
-                                </group>
-                                <group alignment="center" radius="0.0" id="Bfk-Po-M9d">
-                                    <items>
-                                        <button alignment="left" id="omm-pl-wI8">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="DDY-if-de2">
+                                        <button alignment="left" id="nWv-ZZ-Tlc">
+                                            <group key="contentGroup" width="1" alignment="left" id="BVg-uC-ZZ0">
                                                 <items>
-                                                    <imageView alignment="left" image="family" id="zqh-MJ-766"/>
+                                                    <imageView width="30" height="30" alignment="left" image="television" id="1tH-By-PnU"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Televison" textAlignment="center" numberOfLines="2" id="ZZO-Os-JsT"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickContextFamilie" destination="cbj-d1-3bR" id="HOb-TF-lJm"/>
+                                                <action selector="clickContextTv" destination="cbj-d1-3bR" id="e6u-jG-t4X"/>
                                             </connections>
                                         </button>
-                                        <button alignment="left" id="9RC-eO-Wxx">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="Rzn-aJ-b6o">
+                                        <button alignment="left" id="0OX-XH-pVz">
+                                            <group key="contentGroup" width="1" alignment="left" id="SB9-D4-0sY">
                                                 <items>
-                                                    <imageView alignment="left" image="friends" id="7OP-I2-74S"/>
+                                                    <imageView width="30" height="30" alignment="left" image="game" id="YM9-aI-d0p"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Game" textAlignment="center" numberOfLines="2" id="rmn-Uh-5TL"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickContextFriends" destination="cbj-d1-3bR" id="kEr-lD-DLA"/>
+                                                <action selector="clickContextGame" destination="cbj-d1-3bR" id="zWo-AB-Gei"/>
                                             </connections>
                                         </button>
-                                        <button alignment="left" id="QIC-Z9-ou4">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="1jo-fg-Iia">
+                                        <button alignment="left" id="w1O-H8-DHF">
+                                            <group key="contentGroup" width="1" alignment="left" id="36e-ui-L0n">
                                                 <items>
-                                                    <imageView alignment="left" image="shopping" id="y9Y-7x-3rd"/>
+                                                    <imageView width="30" height="30" alignment="left" image="read" id="vNN-ni-6rK"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Read" textAlignment="center" numberOfLines="2" id="iBv-MX-RJu"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickContexShopping" destination="cbj-d1-3bR" id="uei-NL-8Yp"/>
+                                                <action selector="clickContextRead" destination="cbj-d1-3bR" id="SMg-YQ-SMG"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="suw-ZQ-dUA">
+                                            <group key="contentGroup" width="1" alignment="left" id="SCj-nJ-FK9">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="family" id="kUx-Cq-W9I"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Family" textAlignment="center" numberOfLines="2" id="Eoz-ag-l4m"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickContextFamilie" destination="cbj-d1-3bR" id="cbq-Y6-75g"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="v3f-bv-QQc">
+                                            <group key="contentGroup" width="1" alignment="left" id="Vr2-Zk-VbJ">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="friends" id="X7q-Hm-bfF"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Friends" textAlignment="center" numberOfLines="2" id="2dg-Wf-lnR"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickContextFriends" destination="cbj-d1-3bR" id="ueO-Hz-veu"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="tJR-ap-pOa">
+                                            <group key="contentGroup" width="1" alignment="left" id="xfI-CR-phK">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="shopping" id="P1y-5G-KsZ"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Shopping" textAlignment="center" numberOfLines="2" id="5ds-Nd-WdM"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickContexShopping" destination="cbj-d1-3bR" id="7rF-UY-WeX"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -297,6 +409,13 @@
                                     </connections>
                                 </button>
                             </items>
+                            <gestureRecognizers>
+                                <tapGestureRecognizer cancelsTouchesInView="NO" id="3VK-Oh-BGU">
+                                    <connections>
+                                        <action selector="tapView:" destination="cbj-d1-3bR" id="ff7-16-HME"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
                         </group>
                         <group width="1" alignment="left" initiallyAnimated="NO" animationDuration="5" layout="vertical" id="Q6A-xM-5Qc">
                             <items>
@@ -305,101 +424,197 @@
                                         <action selector="clickBackFeeling" destination="cbj-d1-3bR" id="CkB-RN-HNR"/>
                                     </connections>
                                 </button>
-                                <label alignment="left" text="How do you feel?" textAlignment="left" numberOfLines="3" id="UuG-pd-s6W">
-                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                </label>
-                                <group alignment="center" radius="0.0" id="riu-2C-cl5">
+                                <group width="1" alignment="left" layout="vertical" id="p6R-4p-iIf">
                                     <items>
-                                        <button alignment="left" id="8oM-Wg-D6l">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="gpf-HX-gqo">
-                                                <items>
-                                                    <imageView width="28" height="28" alignment="left" image="very_happy" id="UTs-nT-v5A"/>
-                                                </items>
-                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
-                                            </group>
-                                            <connections>
-                                                <action selector="clickFeelingVeryHappy" destination="cbj-d1-3bR" id="YGp-f9-MSy"/>
-                                            </connections>
-                                        </button>
-                                        <button alignment="left" id="Uk9-PG-S2u">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="ihW-hU-3mt">
-                                                <items>
-                                                    <imageView alignment="left" image="happy" id="fSz-9R-tRG"/>
-                                                </items>
-                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
-                                            </group>
-                                            <connections>
-                                                <action selector="clickFeelingHappy" destination="cbj-d1-3bR" id="xkm-0R-2py"/>
-                                            </connections>
-                                        </button>
-                                        <button alignment="left" id="rJj-Fn-NSY">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="NeS-H7-y9N">
-                                                <items>
-                                                    <imageView alignment="left" image="smiling" id="yM0-gD-4TZ"/>
-                                                </items>
-                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
-                                            </group>
-                                            <connections>
-                                                <action selector="clickFeelingSmiling" destination="cbj-d1-3bR" id="0di-jZ-9ut"/>
-                                            </connections>
-                                        </button>
+                                        <group alignment="center" radius="0.0" id="riu-2C-cl5">
+                                            <items>
+                                                <button alignment="left" id="8oM-Wg-D6l">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="gpf-HX-gqo">
+                                                        <items>
+                                                            <imageView alignment="left" image="very_happy" id="UTs-nT-v5A"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickFeelingVeryHappy" destination="cbj-d1-3bR" id="YGp-f9-MSy"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="left" id="Uk9-PG-S2u">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="ihW-hU-3mt">
+                                                        <items>
+                                                            <imageView alignment="left" image="happy" id="fSz-9R-tRG"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickFeelingHappy" destination="cbj-d1-3bR" id="xkm-0R-2py"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="left" id="rJj-Fn-NSY">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="NeS-H7-y9N">
+                                                        <items>
+                                                            <imageView alignment="left" image="smiling" id="yM0-gD-4TZ"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickFeelingSmiling" destination="cbj-d1-3bR" id="0di-jZ-9ut"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
+                                        <group alignment="center" radius="0.0" id="yc9-VS-bry">
+                                            <items>
+                                                <button alignment="left" id="tq3-oQ-l9n">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="9FA-kO-jFq">
+                                                        <items>
+                                                            <imageView alignment="left" image="confused" id="Uzx-8P-mQc"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickFeelingConfused" destination="cbj-d1-3bR" id="PzH-A5-W2s"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="left" id="wQt-N5-gGe">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="w2S-YB-hhE">
+                                                        <items>
+                                                            <imageView alignment="left" image="sad" id="UCB-0Q-oO1"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickFeelingSad" destination="cbj-d1-3bR" id="g6h-sp-09H"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="left" id="Oz7-HS-ZoG">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="W2n-IF-dqa">
+                                                        <items>
+                                                            <imageView alignment="left" image="unhappy" id="igI-UK-NKy"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickFeelingUnHappy" destination="cbj-d1-3bR" id="oYy-Vy-Skh"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
+                                        <group alignment="center" radius="0.0" id="npj-b7-mdN">
+                                            <items>
+                                                <button alignment="left" id="aBT-jO-aHE">
+                                                    <group key="contentGroup" width="34" height="34" alignment="left" id="JxJ-0k-3H2">
+                                                        <items>
+                                                            <imageView alignment="left" image="mad" id="NXG-AG-Kd5"/>
+                                                        </items>
+                                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="clickFeelingAnger" destination="cbj-d1-3bR" id="uLM-6Q-gPE"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
                                     </items>
                                 </group>
-                                <group alignment="center" radius="0.0" id="yc9-VS-bry">
+                                <group width="1" alignment="left" layout="vertical" spacing="2" id="Vp4-QL-6Y7">
                                     <items>
-                                        <button alignment="left" id="tq3-oQ-l9n">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="9FA-kO-jFq">
+                                        <button alignment="left" id="tzK-fl-Xcg">
+                                            <group key="contentGroup" width="1" alignment="left" id="Jo0-Em-jnv">
                                                 <items>
-                                                    <imageView alignment="left" image="confused" id="Uzx-8P-mQc"/>
+                                                    <imageView width="30" height="30" alignment="left" image="very_happy" id="K52-iK-gKq"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Very Happy" textAlignment="center" numberOfLines="2" id="62U-Km-dvr"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickFeelingConfused" destination="cbj-d1-3bR" id="PzH-A5-W2s"/>
+                                                <action selector="clickFeelingVeryHappy" destination="cbj-d1-3bR" id="VtJ-Pa-OSe"/>
                                             </connections>
                                         </button>
-                                        <button alignment="left" id="wQt-N5-gGe">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="w2S-YB-hhE">
+                                        <button alignment="left" id="Egd-TD-t5a">
+                                            <group key="contentGroup" width="1" alignment="left" id="DTT-Rc-Dl9">
                                                 <items>
-                                                    <imageView alignment="left" image="sad" id="UCB-0Q-oO1"/>
+                                                    <imageView width="30" height="30" alignment="left" image="happy" id="AKL-G3-3pE"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Happy" textAlignment="center" numberOfLines="2" id="ABa-mY-7K7"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickFeelingSad" destination="cbj-d1-3bR" id="g6h-sp-09H"/>
+                                                <action selector="clickFeelingHappy" destination="cbj-d1-3bR" id="eix-eS-23R"/>
                                             </connections>
                                         </button>
-                                        <button alignment="left" id="Oz7-HS-ZoG">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="W2n-IF-dqa">
+                                        <button alignment="left" id="In4-cv-Y9O">
+                                            <group key="contentGroup" width="1" alignment="left" id="k8E-qX-BPS">
                                                 <items>
-                                                    <imageView alignment="left" image="unhappy" id="igI-UK-NKy"/>
+                                                    <imageView width="30" height="30" alignment="left" image="smiling" id="ekj-xH-Yc5"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Smilling" textAlignment="center" numberOfLines="2" id="1bI-2F-MkW"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickFeelingUnHappy" destination="cbj-d1-3bR" id="oYy-Vy-Skh"/>
+                                                <action selector="clickFeelingSmiling" destination="cbj-d1-3bR" id="Og0-07-LrL"/>
                                             </connections>
                                         </button>
-                                    </items>
-                                </group>
-                                <group alignment="center" radius="0.0" id="npj-b7-mdN">
-                                    <items>
-                                        <button alignment="left" id="aBT-jO-aHE">
-                                            <group key="contentGroup" width="34" height="34" alignment="left" id="JxJ-0k-3H2">
+                                        <button alignment="left" id="aRi-zM-cC2">
+                                            <group key="contentGroup" width="1" alignment="left" id="pVb-y4-xHc">
                                                 <items>
-                                                    <imageView alignment="left" image="mad" id="NXG-AG-Kd5"/>
+                                                    <imageView width="30" height="30" alignment="left" image="confused" id="Lnq-fn-gDk"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Confused" textAlignment="center" numberOfLines="2" id="HPk-Pd-fJj"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                                             </group>
                                             <connections>
-                                                <action selector="clickFeelingAnger" destination="cbj-d1-3bR" id="uLM-6Q-gPE"/>
+                                                <action selector="clickFeelingConfused" destination="cbj-d1-3bR" id="X8d-I7-Lg9"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="2Mc-9y-i6Q">
+                                            <group key="contentGroup" width="1" alignment="left" id="IP4-vy-Pvb">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="sad" id="YpH-r9-98j"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Sad" textAlignment="center" numberOfLines="2" id="OKO-kE-dzN"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickFeelingSad" destination="cbj-d1-3bR" id="IfW-Zo-USB"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="EGR-Zv-VKt">
+                                            <group key="contentGroup" width="1" alignment="left" id="juV-K1-unV">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="unhappy" id="D7U-RW-cT1"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Unhappy" textAlignment="center" numberOfLines="2" id="S3k-6H-Tgn"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickFeelingUnHappy" destination="cbj-d1-3bR" id="29G-7r-Jmf"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="j9z-jm-uyx">
+                                            <group key="contentGroup" width="1" alignment="left" id="wRt-Af-kas">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="mad" id="QGa-bu-U2X"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Angry" textAlignment="center" numberOfLines="2" id="MMT-Np-p6U"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickFeelingAnger" destination="cbj-d1-3bR" id="2fe-eZ-ZmQ"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -411,6 +626,11 @@
                                         <action selector="clickBackFeeling" destination="cbj-d1-3bR" id="56I-Ox-KbG"/>
                                     </connections>
                                 </swipeGestureRecognizer>
+                                <tapGestureRecognizer cancelsTouchesInView="NO" id="2Ho-BS-Iwj">
+                                    <connections>
+                                        <action selector="tapView:" destination="cbj-d1-3bR" id="iIZ-UI-akv"/>
+                                    </connections>
+                                </tapGestureRecognizer>
                             </gestureRecognizers>
                         </group>
                         <group width="1" alignment="left" initiallyAnimated="NO" animationDuration="5" layout="vertical" id="QL3-D5-3Dr">
@@ -420,9 +640,6 @@
                                         <action selector="clickBackOwnBehavior" destination="cbj-d1-3bR" id="u8f-MO-jjk"/>
                                     </connections>
                                 </button>
-                                <label alignment="left" text="own behavior:" textAlignment="left" numberOfLines="3" id="RpK-zq-rXp">
-                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                </label>
                                 <group width="1" alignment="left" backgroundImage="kiesler-diagramm" contentMode="scaleAspectFit" layout="vertical" spacing="0.0" id="WbF-ih-Mfl">
                                     <items>
                                         <group width="1" alignment="left" id="2hH-O7-Ntf">
@@ -430,7 +647,7 @@
                                                 <button alignment="center" id="3Qd-or-GRq">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="DOn-sH-DBZ">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="open" id="x5Y-w3-Fkw"/>
+                                                            <imageView alignment="left" image="open" id="x5Y-w3-Fkw"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -446,7 +663,7 @@
                                                 <button alignment="left" id="Xgx-zO-iib">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="VQi-DC-Zwy">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="hostile-dominant" id="rlL-DT-Mhz"/>
+                                                            <imageView alignment="left" image="hostile-dominant" id="rlL-DT-Mhz"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -458,7 +675,7 @@
                                                 <button alignment="right" id="h2w-7l-Yvu">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="euz-yg-COZ">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="friendly-dominant" id="iqK-ZI-0h3"/>
+                                                            <imageView alignment="left" image="friendly-dominant" id="iqK-ZI-0h3"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -475,7 +692,7 @@
                                                 <button alignment="left" id="kI4-Bq-ckl">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="5Gd-Xy-35D">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="hostile" id="AYd-Vk-jcu"/>
+                                                            <imageView alignment="left" image="hostile" id="AYd-Vk-jcu"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -487,7 +704,7 @@
                                                 <button alignment="right" id="BXk-xD-UGo">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="bEc-tM-eTA">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="friendly" id="4nL-iK-EHh"/>
+                                                            <imageView alignment="left" image="friendly" id="4nL-iK-EHh"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -503,7 +720,7 @@
                                                 <button alignment="left" id="zsB-gn-dWY">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="LkZ-6z-39I">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="hostile-obsequious" id="xjA-lx-oS5"/>
+                                                            <imageView alignment="left" image="hostile-obsequious" id="xjA-lx-oS5"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -515,7 +732,7 @@
                                                 <button alignment="right" id="d4W-9E-pkV">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="BEc-fx-KpL">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="friendly-obsequious" id="3o0-PA-diR"/>
+                                                            <imageView alignment="left" image="friendly-obsequious" id="3o0-PA-diR"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -532,7 +749,7 @@
                                                 <button alignment="center" id="bbM-jY-bYd">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="AWf-NW-LJs">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="close" id="OwP-mu-1xw"/>
+                                                            <imageView alignment="left" image="close" id="OwP-mu-1xw"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -545,6 +762,122 @@
                                         </group>
                                     </items>
                                 </group>
+                                <group width="1" alignment="left" layout="vertical" spacing="2" id="dBR-VU-Qp8">
+                                    <items>
+                                        <button alignment="left" id="hJW-Aq-t94">
+                                            <group key="contentGroup" width="1" alignment="left" id="39V-bg-0rb">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="open" id="Ys6-8z-Kzu"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Open" textAlignment="center" numberOfLines="2" id="zzf-Px-9RT"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOwnBehaviorOpen" destination="cbj-d1-3bR" id="sdV-pn-AhH"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="pbz-KH-eo3">
+                                            <group key="contentGroup" width="1" alignment="left" id="qhX-4E-74w">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="friendly-dominant" id="vB8-16-UIL"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Friendly-dominant" textAlignment="center" numberOfLines="2" id="Qg7-5n-t2S">
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOwnBehaviorFriendlyDominant" destination="cbj-d1-3bR" id="BZ9-Cd-W9t"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="tdf-zu-A2i">
+                                            <group key="contentGroup" width="1" alignment="left" id="NZf-Qq-tWg">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="friendly" id="4Or-4k-ctp"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Friendly" textAlignment="center" numberOfLines="2" id="fBY-Kw-mzu"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOwnBehaviorFriendly" destination="cbj-d1-3bR" id="uyW-Vx-V8p"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="j2p-6q-QcY">
+                                            <group key="contentGroup" width="1" alignment="left" id="bGG-gL-mC7">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="friendly-obsequious" id="Oqc-VJ-77Q"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Friendly-obsequious" textAlignment="center" numberOfLines="2" id="vJB-QQ-6qu">
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOwnBehaviorFriendlyObsequious" destination="cbj-d1-3bR" id="CVu-8q-QcR"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="kkb-qG-yDC">
+                                            <group key="contentGroup" width="1" alignment="left" id="dqL-Sw-oPq">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="close" id="ie4-gb-2G5"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Close" textAlignment="center" numberOfLines="2" id="DgM-9o-03J"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOwnBehaviorClose" destination="cbj-d1-3bR" id="9f1-JT-T68"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="phK-1L-7rV">
+                                            <group key="contentGroup" width="1" alignment="left" id="yBz-24-lBw">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="hostile-obsequious" id="deq-Cm-mCO"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Hostile-obsequious" textAlignment="center" numberOfLines="2" id="OUU-8e-w7Q">
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOwnBehaviorHostileObsequious" destination="cbj-d1-3bR" id="bVY-Y2-uXj"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="0ZO-RP-jLH">
+                                            <group key="contentGroup" width="1" alignment="left" id="odO-nR-ZKC">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="hostile" id="w9D-AN-KTP"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Hostile" textAlignment="center" numberOfLines="2" id="tTS-P6-uzV"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOwnBehaviorHostile" destination="cbj-d1-3bR" id="XJK-vJ-EPw"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="pAI-I1-mwm">
+                                            <group key="contentGroup" width="1" alignment="left" id="o9g-cl-k3U">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="hostile-dominant" id="ifG-6m-nKK"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Hostile-dominant" textAlignment="center" numberOfLines="2" id="6Af-gc-5X1">
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOwnBehaviorHostileDominant" destination="cbj-d1-3bR" id="zNw-cy-Yaa"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
                             </items>
                             <gestureRecognizers>
                                 <swipeGestureRecognizer id="WWr-Tc-bou">
@@ -552,6 +885,11 @@
                                         <action selector="clickBackOwnBehavior" destination="cbj-d1-3bR" id="5mL-MU-mTP"/>
                                     </connections>
                                 </swipeGestureRecognizer>
+                                <tapGestureRecognizer cancelsTouchesInView="NO" id="kus-Qx-HL3">
+                                    <connections>
+                                        <action selector="tapView:" destination="cbj-d1-3bR" id="no6-mv-Oao"/>
+                                    </connections>
+                                </tapGestureRecognizer>
                             </gestureRecognizers>
                         </group>
                         <group width="1" alignment="left" initiallyAnimated="NO" animationDuration="5" layout="vertical" id="egf-qc-eh1">
@@ -561,9 +899,6 @@
                                         <action selector="clickBackOtherBehavior" destination="cbj-d1-3bR" id="mlQ-5V-OMy"/>
                                     </connections>
                                 </button>
-                                <label alignment="left" text="behavior of other people" textAlignment="left" numberOfLines="3" id="uKz-0I-GKc">
-                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                </label>
                                 <group width="1" alignment="left" backgroundImage="kiesler-diagramm" contentMode="scaleAspectFit" layout="vertical" spacing="0.0" id="UZb-FT-Ses">
                                     <items>
                                         <group width="1" alignment="left" id="DkT-F5-E9b">
@@ -571,7 +906,7 @@
                                                 <button alignment="center" id="3Ic-vr-hPC">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="M3D-ma-6jz">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="open" id="tt9-b9-azf"/>
+                                                            <imageView alignment="left" image="open" id="tt9-b9-azf"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -587,7 +922,7 @@
                                                 <button alignment="left" id="aPu-bj-i4k">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="ZsL-2z-Wjn">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="hostile-dominant" id="lFA-g0-nbo"/>
+                                                            <imageView alignment="left" image="hostile-dominant" id="lFA-g0-nbo"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -599,7 +934,7 @@
                                                 <button alignment="right" id="wrS-Tx-sKl">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="gVT-cC-f7X">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="friendly-dominant" id="6SL-lh-CWX"/>
+                                                            <imageView alignment="left" image="friendly-dominant" id="6SL-lh-CWX"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -616,7 +951,7 @@
                                                 <button alignment="left" id="4zT-cQ-Vos">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="vEz-C0-fN6">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="hostile" id="QJ5-JG-yBW"/>
+                                                            <imageView alignment="left" image="hostile" id="QJ5-JG-yBW"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -628,7 +963,7 @@
                                                 <button alignment="right" id="eXu-7d-quU">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="lX7-HY-VTE">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="friendly" id="4we-SD-zXN"/>
+                                                            <imageView alignment="left" image="friendly" id="4we-SD-zXN"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -644,7 +979,7 @@
                                                 <button alignment="left" id="ILU-b9-EUx">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="U8w-Jz-jQZ">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="hostile-obsequious" id="w8E-oV-0bl"/>
+                                                            <imageView alignment="left" image="hostile-obsequious" id="w8E-oV-0bl"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -656,7 +991,7 @@
                                                 <button alignment="right" id="Z5i-Nj-cwW">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="SxZ-XT-GeU">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="friendly-obsequious" id="wUw-Hf-8Ha"/>
+                                                            <imageView alignment="left" image="friendly-obsequious" id="wUw-Hf-8Ha"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -673,7 +1008,7 @@
                                                 <button alignment="center" id="7KV-Aa-44l">
                                                     <group key="contentGroup" width="34" height="34" alignment="left" id="euC-ED-VJL">
                                                         <items>
-                                                            <imageView width="28" height="28" alignment="left" image="close" id="nJ7-hU-lHq"/>
+                                                            <imageView alignment="left" image="close" id="nJ7-hU-lHq"/>
                                                         </items>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -686,6 +1021,122 @@
                                         </group>
                                     </items>
                                 </group>
+                                <group width="1" alignment="left" layout="vertical" spacing="2" id="vxj-js-gaG">
+                                    <items>
+                                        <button alignment="left" id="dd3-mI-BWN">
+                                            <group key="contentGroup" width="1" alignment="left" id="B9h-Qn-iPw">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="open" id="99P-kR-Ov8"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Open" textAlignment="center" numberOfLines="2" id="Srq-Cr-cSf"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOtherBehaviorOpen" destination="cbj-d1-3bR" id="fh1-qL-QM4"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="JtS-8W-wSu">
+                                            <group key="contentGroup" width="1" alignment="left" id="h0V-UA-yGa">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="friendly-dominant" id="xVB-ab-ZW0"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Friendly-dominant" textAlignment="center" numberOfLines="2" id="ucS-vy-Xvc">
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOtherBehaviorFriendlyDominant" destination="cbj-d1-3bR" id="V7y-hc-mp4"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="0UA-9u-rOM">
+                                            <group key="contentGroup" width="1" alignment="left" id="Y8H-83-5zb">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="friendly" id="dDj-k4-kdJ"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Friendly" textAlignment="center" numberOfLines="2" id="aL5-8d-GEF"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOtherBehaviorFriendly" destination="cbj-d1-3bR" id="XWT-3d-xhR"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="ZpV-16-pdz">
+                                            <group key="contentGroup" width="1" alignment="left" id="I3D-84-ser">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="friendly-obsequious" id="IZa-au-glW"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Friendly-obsequious" textAlignment="center" numberOfLines="2" id="SBT-Ii-5sq">
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOtherBehaviorFriendlyObsequious" destination="cbj-d1-3bR" id="G4Q-LP-YG4"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="dLh-rY-q2n">
+                                            <group key="contentGroup" width="1" alignment="left" id="uuP-JZ-htZ">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="close" id="tLo-5G-6LM"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Close" textAlignment="center" numberOfLines="2" id="wDG-v7-psX"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOtherBehaviorClose" destination="cbj-d1-3bR" id="llm-v4-8qL"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="UB6-Mr-iAG">
+                                            <group key="contentGroup" width="1" alignment="left" id="DBz-tC-C51">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="hostile-obsequious" id="LNV-As-buL"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Hostile-obsequious" textAlignment="center" numberOfLines="2" id="BRj-eb-5xn">
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOtherBehaviorHostileObsequious" destination="cbj-d1-3bR" id="nHw-LP-E3g"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="CQR-V0-GSW">
+                                            <group key="contentGroup" width="1" alignment="left" id="TQd-qt-3bS">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="hostile" id="SPY-N4-ygb"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Hostile" textAlignment="center" numberOfLines="2" id="aIy-HX-f4b"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOtherBehaviorHostile" destination="cbj-d1-3bR" id="g9Q-Aa-J1q"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="Cn3-Ef-juE">
+                                            <group key="contentGroup" width="1" alignment="left" id="T0g-Tr-e7A">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" image="hostile-dominant" id="s6c-Lz-Flb"/>
+                                                    <label width="1" widthAdjustment="-30" height="1" alignment="left" text="Hostile-dominant" textAlignment="center" numberOfLines="2" id="l57-dd-C5B">
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="clickOtherBehaviorHostileDominant" destination="cbj-d1-3bR" id="A3U-0h-Nk9"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
                             </items>
                             <gestureRecognizers>
                                 <swipeGestureRecognizer id="EBx-nw-1w5">
@@ -693,6 +1144,11 @@
                                         <action selector="clickBackOtherBehavior" destination="cbj-d1-3bR" id="aT0-Py-JlN"/>
                                     </connections>
                                 </swipeGestureRecognizer>
+                                <tapGestureRecognizer cancelsTouchesInView="NO" id="OVe-ZV-OTh">
+                                    <connections>
+                                        <action selector="tapView:" destination="cbj-d1-3bR" id="xtt-Vd-uE1"/>
+                                    </connections>
+                                </tapGestureRecognizer>
                             </gestureRecognizers>
                         </group>
                         <group width="1" alignment="left" initiallyAnimated="NO" animationDuration="5" layout="vertical" id="qkb-rt-teQ">
@@ -702,9 +1158,6 @@
                                         <action selector="clickBackDidSport" destination="cbj-d1-3bR" id="RYW-bR-beV"/>
                                     </connections>
                                 </button>
-                                <label alignment="left" text="did you  do sport in the space of the last tracking?" textAlignment="left" numberOfLines="3" id="Zvg-ka-6gX">
-                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                </label>
                                 <group width="1" alignment="left" spacing="10" id="MZp-fY-37y">
                                     <items>
                                         <button width="0.5" alignment="left" title="YES" id="BbW-JD-gFK">
@@ -733,6 +1186,11 @@
                                         <action selector="clickBackDidSport" destination="cbj-d1-3bR" id="itg-JL-IHc"/>
                                     </connections>
                                 </swipeGestureRecognizer>
+                                <tapGestureRecognizer cancelsTouchesInView="NO" id="o02-JZ-xtD">
+                                    <connections>
+                                        <action selector="tapView:" destination="cbj-d1-3bR" id="Bza-XR-dul"/>
+                                    </connections>
+                                </tapGestureRecognizer>
                             </gestureRecognizers>
                         </group>
                     </items>
@@ -741,10 +1199,55 @@
                         <outlet property="btnBackFeeling" destination="BuZ-Jn-yWN" id="zQn-kC-utV"/>
                         <outlet property="btnBackOtherBehavior" destination="a5x-im-ucc" id="EXg-sy-TVl"/>
                         <outlet property="btnBackOwnBehavior" destination="qNc-ad-THg" id="E5L-7a-PSV"/>
+                        <outlet property="btnSportNo" destination="uaP-LL-0GX" id="zHh-b6-cf6"/>
+                        <outlet property="btnSportYes" destination="BbW-JD-gFK" id="pzX-la-wFA"/>
+                        <outlet property="goupBtnConfused" destination="9FA-kO-jFq" id="Ehg-TT-oul"/>
+                        <outlet property="goupBtnFriendly" destination="bEc-tM-eTA" id="2NW-SV-xNM"/>
+                        <outlet property="goupBtnHappy" destination="ihW-hU-3mt" id="s4m-65-fGO"/>
+                        <outlet property="goupBtnMad" destination="JxJ-0k-3H2" id="A1m-EP-Ta7"/>
+                        <outlet property="goupBtnOtherFriendly" destination="lX7-HY-VTE" id="qOk-gG-7gA"/>
+                        <outlet property="goupBtnOtherFriendlyDominant" destination="gVT-cC-f7X" id="Lme-p6-uHb"/>
+                        <outlet property="goupBtnOtherHostile" destination="vEz-C0-fN6" id="LpR-g6-4RH"/>
+                        <outlet property="goupBtnOtherHostileDominat" destination="ZsL-2z-Wjn" id="e78-1J-SDD"/>
+                        <outlet property="goupBtnOtherOpen" destination="M3D-ma-6jz" id="bph-3V-wE8"/>
+                        <outlet property="goupBtnOwnFriendlyDominant" destination="euz-yg-COZ" id="oVU-iN-a7J"/>
+                        <outlet property="goupBtnOwnHostile" destination="5Gd-Xy-35D" id="DEw-js-lgf"/>
+                        <outlet property="goupBtnOwnHostileDominat" destination="VQi-DC-Zwy" id="6T1-kj-aDQ"/>
+                        <outlet property="goupBtnOwnOpen" destination="DOn-sH-DBZ" id="igQ-Xr-hI1"/>
+                        <outlet property="goupBtnSad" destination="w2S-YB-hhE" id="jzS-GB-c8h"/>
+                        <outlet property="goupBtnSmilling" destination="NeS-H7-y9N" id="Zj2-RF-BB0"/>
+                        <outlet property="goupBtnUnhappy" destination="W2n-IF-dqa" id="tQ8-wy-gfG"/>
+                        <outlet property="goupBtnVeryHappy" destination="gpf-HX-gqo" id="yeo-YJ-liA"/>
+                        <outlet property="groupBtnDoctor" destination="Ucz-Xg-edJ" id="udx-Zn-5wx"/>
+                        <outlet property="groupBtnFamily" destination="DDY-if-de2" id="voq-Vb-vfg"/>
+                        <outlet property="groupBtnFriends" destination="Rzn-aJ-b6o" id="g3c-mC-rYb"/>
+                        <outlet property="groupBtnGame" destination="e1q-xc-NQa" id="vJf-Cd-WKS"/>
+                        <outlet property="groupBtnHome" destination="fLl-uZ-8hj" id="eak-Ty-mDG"/>
+                        <outlet property="groupBtnMusic" destination="De7-KX-qij" id="IGJ-mE-Bx0"/>
+                        <outlet property="groupBtnOtherClose" destination="euC-ED-VJL" id="Kby-Ej-BRo"/>
+                        <outlet property="groupBtnOtherFriendlyObsequious" destination="SxZ-XT-GeU" id="9am-W2-Lv9"/>
+                        <outlet property="groupBtnOtherHostileObsequious" destination="U8w-Jz-jQZ" id="RwN-nd-ajh"/>
+                        <outlet property="groupBtnOwnClose" destination="AWf-NW-LJs" id="EXn-vV-bSP"/>
+                        <outlet property="groupBtnOwnFriendlyObsequious" destination="BEc-fx-KpL" id="bW5-CP-KFv"/>
+                        <outlet property="groupBtnOwnHostileObsequious" destination="LkZ-6z-39I" id="131-ce-dh6"/>
+                        <outlet property="groupBtnRead" destination="5s0-zJ-89X" id="j7m-Y0-d88"/>
+                        <outlet property="groupBtnReleax" destination="Zys-Wd-14K" id="OIp-9X-azc"/>
+                        <outlet property="groupBtnShopping" destination="1jo-fg-Iia" id="WQA-TY-zKl"/>
+                        <outlet property="groupBtnSport" destination="b3T-nf-aA6" id="gMU-oc-A9K"/>
+                        <outlet property="groupBtnTv" destination="u2n-XZ-hK1" id="5mQ-ux-PvS"/>
+                        <outlet property="groupBtnWork" destination="eRl-al-bul" id="bAo-BJ-6er"/>
                         <outlet property="groupContext" destination="bY3-9p-Gxq" id="2Jy-EE-vuJ"/>
+                        <outlet property="groupContextIcons" destination="D0B-bt-a4R" id="f4D-7u-RHO"/>
+                        <outlet property="groupContextList" destination="Y5C-v2-8bX" id="vbz-xs-KrO"/>
                         <outlet property="groupFeeling" destination="Q6A-xM-5Qc" id="W04-oy-vUV"/>
+                        <outlet property="groupFeelingIcons" destination="p6R-4p-iIf" id="xn6-Rk-oae"/>
+                        <outlet property="groupFeelingList" destination="Vp4-QL-6Y7" id="SZe-de-K94"/>
                         <outlet property="groupOtherBehavior" destination="egf-qc-eh1" id="stf-2l-VM4"/>
+                        <outlet property="groupOtherBehaviorIcons" destination="UZb-FT-Ses" id="KDm-nC-uwy"/>
+                        <outlet property="groupOtherBehaviorList" destination="vxj-js-gaG" id="yDc-C4-d2B"/>
                         <outlet property="groupOwnBehavior" destination="QL3-D5-3Dr" id="bdm-Fj-uPN"/>
+                        <outlet property="groupOwnBehaviorIcons" destination="WbF-ih-Mfl" id="cJz-Nc-YlH"/>
+                        <outlet property="groupOwnBehaviorList" destination="dBR-VU-Qp8" id="WVP-t6-dPx"/>
                         <outlet property="groupSport" destination="qkb-rt-teQ" id="ohK-ji-tg9"/>
                     </connections>
                 </controller>

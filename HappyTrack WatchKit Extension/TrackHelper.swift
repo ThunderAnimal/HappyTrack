@@ -12,7 +12,7 @@ class TrackHelper{
     private var trackdata: TrackData
     
     init() {
-        trackdata = TrackData(context: "", feeling: "", ownBehavior: "", otherBehavior: "", didSport: false, minPuls: 0, maxPuls: 0, stepCount: 0)
+        trackdata = TrackData(context: "", feeling: "", ownBehavior: "", otherBehavior: "", didSport: false, minPuls: Int.max, maxPuls: Int.min, stepCount: 0)
     }
     
     public func setContext(context:String){
@@ -31,10 +31,18 @@ class TrackHelper{
     public func setDidSport(didSport:Bool){
                 trackdata = TrackData(context: trackdata.context, feeling: trackdata.feeling, ownBehavior: trackdata.ownBehavior, otherBehavior: trackdata.otherBehavior, didSport: didSport, minPuls: trackdata.minPuls, maxPuls: trackdata.maxPuls, stepCount: trackdata.stepCount)
     }
-    public func setMinPuls(minPuls: Int){
+    public func newPulsData(pulsData:Int){
+        if(pulsData > trackdata.maxPuls){
+            setMaxPuls(maxPuls: pulsData)
+        }
+        if(pulsData < trackdata.minPuls){
+            setMinPuls(minPuls: pulsData)
+        }
+    }
+    private func setMinPuls(minPuls: Int){
                 trackdata = TrackData(context: trackdata.context, feeling: trackdata.feeling, ownBehavior: trackdata.ownBehavior, otherBehavior: trackdata.otherBehavior, didSport: trackdata.didSport, minPuls: minPuls, maxPuls: trackdata.maxPuls, stepCount: trackdata.stepCount)
     }
-    public func setMaxPuls(maxPuls: Int){
+    private func setMaxPuls(maxPuls: Int){
              trackdata = TrackData(context: trackdata.context, feeling: trackdata.feeling, ownBehavior: trackdata.ownBehavior, otherBehavior: trackdata.otherBehavior, didSport: trackdata.didSport, minPuls: trackdata.minPuls, maxPuls: maxPuls, stepCount: trackdata.stepCount)
     }
     public func setStepCount(stepCount: Int){
