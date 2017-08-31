@@ -24,6 +24,7 @@ class NotificationHelper: NSObject {
     }
     
     public func registerLocalNotification(startHour:Int, endHour:Int, interval:Int){
+        let friendlyHelper = FriendlyHelper()
         let dateNow = Date()
         let dateNowString = DateFormatter()
         dateNowString.dateFormat = "y-MM-dd H:m:ss.SSSS"
@@ -36,8 +37,8 @@ class NotificationHelper: NSObject {
             let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second], from: date!)
             
             let content = UNMutableNotificationContent()
-            content.title = "Hey what's Up?"
-            content.body = "Time to Track Happiness. Your are amazing!"
+            content.title = friendlyHelper.getRandomGreetings()
+            content.body = "Time to Track Happiness. " + friendlyHelper.getRandomMotivates()
             content.categoryIdentifier = Constants.NotificationCategory.happytrack_needed.indentifier()
 
             content.sound = UNNotificationSound.default()

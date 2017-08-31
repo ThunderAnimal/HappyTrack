@@ -14,6 +14,7 @@ import WatchConnectivity
 class StartInterfaceController: WKInterfaceController {
     
     @IBOutlet var usernameLabel: WKInterfaceLabel!
+    @IBOutlet var motivatesLabel: WKInterfaceLabel!
     
     lazy var notificationCenter: NotificationCenter = {
         return NotificationCenter.default
@@ -52,6 +53,8 @@ class StartInterfaceController: WKInterfaceController {
         if let name = UserDefaults.standard.string(forKey: Constants.Person.name.key()){
             usernameLabel.setText("Hey " + name + ",")
         }
+        motivatesLabel.setText(FriendlyHelper().getRandomMotivates())
+        
     }
 }
 

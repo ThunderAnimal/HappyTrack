@@ -28,10 +28,13 @@ class FriendlyHelper {
         "I believe in you."
     ]
     
-    func getRandomGreetings(){
+    func getRandomGreetings()->String{
+        let randomNum:Int = Int(arc4random_uniform(UInt32(self.greetings.count))) // range is 0 to length array greetings-1
+        return greetings[randomNum]
         
     }
-    func getRandomMotivates(){
-        
+    func getRandomMotivates()-> String{
+        let randomNum:Int = Int(arc4random_uniform(UInt32(self.motivates.count))) // range is 0 to length array motivates-1
+        return motivates[randomNum]
     }
 }
