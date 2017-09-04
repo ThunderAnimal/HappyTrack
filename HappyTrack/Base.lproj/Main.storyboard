@@ -293,7 +293,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Tracked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-Vx-Iho">
-                                <rect key="frame" x="38" y="314" width="244" height="21"/>
+                                <rect key="frame" x="65.5" y="314" width="244" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="244" id="JKA-9O-EIl"/>
                                     <constraint firstAttribute="height" constant="21" id="Kyx-hX-NdQ"/>
@@ -323,9 +323,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="jbk-Vx-Iho" secondAttribute="trailing" constant="22" id="0Zo-Uz-Oat"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RiK-oj-Xay" secondAttribute="trailing" constant="104" id="IwR-rv-MqF"/>
-                            <constraint firstItem="jbk-Vx-Iho" firstAttribute="leading" secondItem="wTO-Ns-VoC" secondAttribute="leadingMargin" constant="22" id="JCd-kF-CEO"/>
                             <constraint firstItem="cg7-Ef-v4c" firstAttribute="leading" secondItem="wTO-Ns-VoC" secondAttribute="leadingMargin" constant="71" id="ck2-Vh-7sK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cg7-Ef-v4c" secondAttribute="trailing" constant="70" id="frH-SW-jaU"/>
                             <constraint firstItem="IAH-Bf-b0Y" firstAttribute="top" secondItem="H2E-lH-GFw" secondAttribute="bottom" constant="30" id="ijy-9v-EgM"/>
@@ -334,6 +332,7 @@
                             <constraint firstItem="RiK-oj-Xay" firstAttribute="top" secondItem="jbk-Vx-Iho" secondAttribute="bottom" constant="15" id="qN2-FY-jDq"/>
                             <constraint firstItem="IAH-Bf-b0Y" firstAttribute="centerX" secondItem="wTO-Ns-VoC" secondAttribute="centerX" id="qxJ-r0-yYl"/>
                             <constraint firstItem="jbk-Vx-Iho" firstAttribute="top" secondItem="IAH-Bf-b0Y" secondAttribute="bottom" constant="20" id="rnL-ag-g2g"/>
+                            <constraint firstItem="jbk-Vx-Iho" firstAttribute="centerX" secondItem="wTO-Ns-VoC" secondAttribute="centerX" id="yj5-GV-NSR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="HappyTrack" id="We6-dm-Fed"/>
@@ -367,18 +366,17 @@
         <!--Historie-->
         <scene sceneID="YeH-nj-l6Z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NRt-pp-VcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Historie" id="OF1-H5-KYF" customClass="HistorieViewController" customModule="HappyTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kue-M1-5NF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIdentifier" id="hmK-Ul-0xf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CellIdentifier" id="hmK-Ul-0xf">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hmK-Ul-0xf" id="Xjw-wj-2LI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -394,6 +392,7 @@
                         <segue destination="taY-c2-lhd" kind="show" identifier="showHistorieDetail" id="c0Y-NB-Dyr"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRt-pp-VcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-428" y="-298"/>
         </scene>

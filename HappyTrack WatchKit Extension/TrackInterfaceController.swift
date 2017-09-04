@@ -589,19 +589,19 @@ class TrackInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate 
     // ******** GENERAL UI Funcions
     private func switchGroup(hideGroup: WKInterfaceGroup, showGroup: WKInterfaceGroup){
         
-        self.animate(withDuration: 0.5) {
+        self.animate(withDuration: 0.100) {
             hideGroup.setAlpha(0)
         }
         
-        self.animate(withDuration: 0.5) {
+        self.animate(withDuration: 0.250) {
             hideGroup.setHeight(0)
         }
         
-        DispatchQueue.init(label: "TEST").asyncAfter(wallDeadline: .now() + .milliseconds(500)) {
-            self.animate(withDuration: 0.5) {
+        DispatchQueue.init(label: "SWITCHGROUP").asyncAfter(wallDeadline: .now() + .milliseconds(250)) {
+            self.animate(withDuration: 0.100) {
                 showGroup.setAlpha(1)
             }
-            self.animate(withDuration: 0.5) {
+            self.animate(withDuration: 0.250) {
                 showGroup.sizeToFitHeight()
             }
         }

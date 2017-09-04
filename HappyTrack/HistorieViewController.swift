@@ -57,7 +57,7 @@ class HistorieViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
         let entity = items.filter("date == %@", sectionNames[indexPath.section])[indexPath.row]
         cell.textLabel?.text = entity.time + " - " + entity.feeling.uppercased()
-        
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
