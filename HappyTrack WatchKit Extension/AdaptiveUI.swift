@@ -16,27 +16,35 @@ class AdaptivUI{
     private let maxIconButtonSize = 45
     private let buttonChangeSize = 4
     
-    private let pulsChangeView = 80
+    private let pulsChangeView = 90
+    
+    private let seceondToTimeout = 5.0
     
     private var currentIconButtonSize: Int
     private var actionAfterTap: Bool
     
-    private var currentAdaptiveUIState: AdaptiveState
+    private var currentAdaptiveUIState: AdaptiveState!
     
     private var listIconButtons = [WKInterfaceObject]()
     private var listGroupIcons = [WKInterfaceObject]()
     private var listGroupListButtos = [WKInterfaceObject]()
     
+    private var timeout:DispatchWorkItem!
+    
     public init(){
         self.currentIconButtonSize = defaultIconButtonSize
         self.actionAfterTap = false
-        
-        currentAdaptiveUIState = NeutraleState()
     }
     
     public func startTrack(){
         currentAdaptiveUIState = NeutraleState()
+        
+        timeout = DispatchWorkItem(block: {
+             self.currentAdaptiveUIState = self.currentAdaptiveUIState.noFeedback(adaptiveUI: self)
+        })
+        
         self.showNormal()
+        self.restStartTimeoutTimer()
     }
     
     public func tapOnView(){
@@ -51,11 +59,13 @@ class AdaptivUI{
     
     public func tapWithAction(){
         actionAfterTap = true
+        self.restStartTimeoutTimer()
         self.currentAdaptiveUIState = self.currentAdaptiveUIState.tapHit(adaptiveUI: self)
     }
     
     public func tapWithActionBack(){
         actionAfterTap = true
+        self.restStartTimeoutTimer()
         self.currentAdaptiveUIState = self.currentAdaptiveUIState.tapBack(adaptiveUI: self)
     }
     
@@ -130,7 +140,15 @@ class AdaptivUI{
         self.hideGroupIcons()
         self.showGroupListButtons()
     }
-    
+    private func restStartTimeoutTimer(){
+        timeout.cancel()
+        
+        //FEATURE ON SWIFT, will cancel all pending DispatchWorkItem events and prevent future.. so init every time new on
+        timeout = DispatchWorkItem(block: { 
+            self.currentAdaptiveUIState = self.currentAdaptiveUIState.noFeedback(adaptiveUI: self)
+        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + self.seceondToTimeout, execute: timeout)
+    }
     private func addItemToList(list: inout [WKInterfaceObject], item: WKInterfaceObject){
         list.append(item)
     }
