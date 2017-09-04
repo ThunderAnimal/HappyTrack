@@ -96,7 +96,8 @@ class DecreaseUIObjectSize: AdaptiveState {
 }
 class Timeout: AdaptiveState {
     func tapBack(adaptiveUI: AdaptivUI) -> AdaptiveState {
-        return self
+        adaptiveUI.showNormal()
+        return NeutraleState()
     }
 
     func tapMiss(adaptiveUI: AdaptivUI) -> AdaptiveState {
