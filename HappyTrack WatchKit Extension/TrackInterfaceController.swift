@@ -204,7 +204,9 @@ class TrackInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate 
             suggestionsContext = [String]()
         }
         
+        adaptiveUI.openModalOnTrack()
         self.presentTextInputController(withSuggestions: suggestionsContext, allowedInputMode: .plain) { (result) in
+            self.adaptiveUI.closeModalOnTrack()
             if((result != nil) && (result?.count)! > 0){
                 let string = (result as? [String])?.joined(separator: " ")
                 self.trackContext(context: string!)
@@ -242,18 +244,22 @@ class TrackInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate 
     }
     @IBAction func clickFeelingConfused() {
         adaptiveUI.tapWithAction()
+        adaptiveUI.trackConfused()
         self.trackFeeling(feeling: Constants.TrackFeeling.confused.key())
     }
     @IBAction func clickFeelingSad() {
         adaptiveUI.tapWithAction()
+        adaptiveUI.trackUnhappyOrSad()
         self.trackFeeling(feeling: Constants.TrackFeeling.sad.key())
     }
     @IBAction func clickFeelingUnHappy() {
         adaptiveUI.tapWithAction()
+        adaptiveUI.trackUnhappyOrSad()
         self.trackFeeling(feeling: Constants.TrackFeeling.unhappy.key())
     }
     @IBAction func clickFeelingAnger() {
         adaptiveUI.tapWithAction()
+        adaptiveUI.trackAnger()
         self.trackFeeling(feeling: Constants.TrackFeeling.anger.key())
     }
     //************************
@@ -357,7 +363,7 @@ class TrackInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate 
         groupSport.setHeight(0)
         
         //Set Neural State Adaptiv UI
-        adaptiveUI.startTrack()
+        adaptiveUI.startTrack(trackInterface: self)
         
         //measure Puls
         self.starWorkout()
@@ -608,6 +614,12 @@ class TrackInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate 
     }
     
     private func addGroupsToAdaptiveUI(){
+        adaptiveUI.addGroupQuestion(group: groupContext)
+        adaptiveUI.addGroupQuestion(group: groupFeeling)
+        adaptiveUI.addGroupQuestion(group: groupOwnBehavior)
+        adaptiveUI.addGroupQuestion(group: groupOtherBehavior)
+        adaptiveUI.addGroupQuestion(group: groupSport)
+        
         adaptiveUI.addGroupIcon(group: groupContextIcons)
         adaptiveUI.addGroupIcon(group: groupFeelingIcons)
         adaptiveUI.addGroupIcon(group: groupOwnBehaviorIcons)
@@ -620,6 +632,12 @@ class TrackInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate 
     }
     
     private func removeGroupsToAdaptiveUI(){
+        adaptiveUI.removeGroupQuestion(group: groupContext)
+        adaptiveUI.removeGroupQuestion(group: groupFeeling)
+        adaptiveUI.removeGroupQuestion(group: groupOwnBehavior)
+        adaptiveUI.removeGroupQuestion(group: groupOtherBehavior)
+        adaptiveUI.removeGroupQuestion(group: groupSport)
+        
         adaptiveUI.removeGroupIcon(group: groupContextIcons)
         adaptiveUI.removeGroupIcon(group: groupFeelingIcons)
         adaptiveUI.removeGroupIcon(group: groupOwnBehaviorIcons)

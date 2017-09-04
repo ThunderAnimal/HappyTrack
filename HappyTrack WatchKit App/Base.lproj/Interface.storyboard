@@ -44,6 +44,62 @@
             </objects>
             <point key="canvasLocation" x="178" y="344"/>
         </scene>
+        <!--Confused_View-->
+        <scene sceneID="YvG-eP-qVo">
+            <objects>
+                <controller identifier="Confused_View" id="BCZ-lu-qFV" customClass="TrackInterfaceMotivater" customModule="HappyTrack_WatchKit_Extension">
+                    <items>
+                        <imageView alignment="left" image="all_is_well" id="6sa-KT-oXf"/>
+                        <separator alignment="left" id="WlP-Wi-3KZ"/>
+                        <button width="1" alignment="left" title="Ich weiß!" id="HHK-gQ-qzJ">
+                            <color key="backgroundColor" red="0.2196078431372549" green="0.74509803921568629" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="closeModal" destination="BCZ-lu-qFV" id="V9n-sf-T3N"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="523" y="-599"/>
+        </scene>
+        <!--Mad_View-->
+        <scene sceneID="gm2-Jg-zcD">
+            <objects>
+                <controller identifier="Mad_View" id="d3r-z3-poH" customClass="TrackInterfaceMotivater" customModule="HappyTrack_WatchKit_Extension">
+                    <items>
+                        <imageView alignment="left" image="keep_calm" id="fOd-ME-vcr"/>
+                        <separator alignment="left" id="hvx-9C-4nN"/>
+                        <button width="1" alignment="left" title="OK!" id="2Ig-Lx-2xV">
+                            <color key="backgroundColor" red="0.2470588235" green="0.31764705879999999" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="17"/>
+                            <connections>
+                                <action selector="closeModal" destination="d3r-z3-poH" id="ahQ-Al-OQM"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="523" y="-290"/>
+        </scene>
+        <!--Sad_View-->
+        <scene sceneID="rxU-KY-2RZ">
+            <objects>
+                <controller identifier="Sad_View" id="UAI-KA-lpt" customClass="TrackInterfaceMotivater" customModule="HappyTrack_WatchKit_Extension">
+                    <items>
+                        <imageView alignment="left" image="ich_mache_weiter" id="Jus-uL-gng"/>
+                        <separator alignment="left" id="KWx-Pp-uez"/>
+                        <button width="1" alignment="left" title="NA KLAR!" id="zLB-ov-nht">
+                            <color key="backgroundColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="17"/>
+                            <connections>
+                                <action selector="closeModal" destination="UAI-KA-lpt" id="VbL-D7-Jem"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="523" y="25"/>
+        </scene>
         <!--Happy State-->
         <scene sceneID="gYB-Tg-aa3">
             <objects>
@@ -404,6 +460,7 @@
                                 </group>
                                 <button width="120" height="30" alignment="center" title="other..." id="6Jv-j0-iJA">
                                     <color key="titleColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <action selector="clickContextOther" destination="cbj-d1-3bR" id="nO2-M0-DbS"/>
                                     </connections>
@@ -1151,7 +1208,7 @@
                                 </tapGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" initiallyAnimated="NO" animationDuration="5" layout="vertical" id="qkb-rt-teQ">
+                        <group width="1" height="1" alignment="left" initiallyAnimated="NO" animationDuration="5" layout="vertical" id="qkb-rt-teQ">
                             <items>
                                 <button width="1" alignment="left" title="&lt; [BEHAVIOR]" id="ANF-W2-pko">
                                     <connections>

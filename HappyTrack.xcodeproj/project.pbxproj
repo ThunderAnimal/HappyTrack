@@ -39,6 +39,7 @@
 		381FE69E1F31A5D100C6248B /* HealthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE69D1F31A5D100C6248B /* HealthController.swift */; };
 		381FE6A01F31AB6E00C6248B /* UIExtansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE69F1F31AB6E00C6248B /* UIExtansions.swift */; };
 		381FE6A21F31ABAD00C6248B /* convCGValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381FE6A11F31ABAD00C6248B /* convCGValues.swift */; };
+		38512C661F5D879900E123A5 /* TrackInterfaceMotivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38512C651F5D879900E123A5 /* TrackInterfaceMotivate.swift */; };
 		3888A9071F54259400CDB3D1 /* HistorieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888A9061F54259400CDB3D1 /* HistorieDetailViewController.swift */; };
 		3888A9091F543F8E00CDB3D1 /* AdaptiveUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888A9081F543F8E00CDB3D1 /* AdaptiveUI.swift */; };
 		3888A90C1F5455EF00CDB3D1 /* AdaptiveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888A90B1F5455EF00CDB3D1 /* AdaptiveState.swift */; };
@@ -159,6 +160,7 @@
 		381FE69D1F31A5D100C6248B /* HealthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthController.swift; sourceTree = "<group>"; };
 		381FE69F1F31AB6E00C6248B /* UIExtansions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtansions.swift; sourceTree = "<group>"; };
 		381FE6A11F31ABAD00C6248B /* convCGValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = convCGValues.swift; sourceTree = "<group>"; };
+		38512C651F5D879900E123A5 /* TrackInterfaceMotivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackInterfaceMotivate.swift; sourceTree = "<group>"; };
 		3888A9061F54259400CDB3D1 /* HistorieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorieDetailViewController.swift; sourceTree = "<group>"; };
 		3888A9081F543F8E00CDB3D1 /* AdaptiveUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveUI.swift; sourceTree = "<group>"; };
 		3888A90B1F5455EF00CDB3D1 /* AdaptiveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveState.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				3818345A1F48877500C1A6A5 /* TrackInterfaceController.swift */,
+				38512C651F5D879900E123A5 /* TrackInterfaceMotivate.swift */,
 			);
 			name = track;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 				381834621F49A93F00C1A6A5 /* TrackHelper.swift in Sources */,
 				3818345D1F489D7900C1A6A5 /* IconGroupButton.swift in Sources */,
 				381FE6761F2FA43C00C6248B /* NotificationController.swift in Sources */,
+				38512C661F5D879900E123A5 /* TrackInterfaceMotivate.swift in Sources */,
 				3818345B1F48877500C1A6A5 /* TrackInterfaceController.swift in Sources */,
 				381834601F498DF400C1A6A5 /* TrackData.swift in Sources */,
 				381FE6741F2FA43C00C6248B /* ExtensionDelegate.swift in Sources */,

@@ -20,23 +20,32 @@ class AdaptivUI{
     
     private let seceondToTimeout = 5.0
     
+    private let colorGreen =  UIColor.init(red: 56.0/255.0, green: 190.0/255.0, blue: 55.0/255.0, alpha: 1.0)
+    private let colorBlue = UIColor.init(red: 63.0/255.0, green: 81.0/255.0, blue: 181.0/255.0, alpha: 1.0)
+    private let colorOrange = UIColor.init(red: 225.0/255.0, green: 152.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+    
     private var currentIconButtonSize: Int
     private var actionAfterTap: Bool
     
     private var currentAdaptiveUIState: AdaptiveState!
     
     private var listIconButtons = [WKInterfaceObject]()
+    private var listGroupQuestions = [WKInterfaceObject]()
     private var listGroupIcons = [WKInterfaceObject]()
     private var listGroupListButtos = [WKInterfaceObject]()
     
     private var timeout:DispatchWorkItem!
+    
+    private var trackInterface: WKInterfaceController!
     
     public init(){
         self.currentIconButtonSize = defaultIconButtonSize
         self.actionAfterTap = false
     }
     
-    public func startTrack(){
+    public func startTrack(trackInterface: WKInterfaceController){
+        self.trackInterface = trackInterface
+        
         currentAdaptiveUIState = NeutraleState()
         
         timeout = DispatchWorkItem(block: {
@@ -77,11 +86,41 @@ class AdaptivUI{
         }
     }
     
+    public func trackConfused(){
+        trackInterface.presentController(withName: "Confused_View", context: nil)
+        self.setBackgroundColor(color: colorGreen)
+        
+        self.openModalOnTrack()
+    }
+    public func trackUnhappyOrSad(){
+        trackInterface.presentController(withName: "Sad_View", context: nil)
+        self.setBackgroundColor(color: colorOrange)
+        
+        self.openModalOnTrack()
+    }
+    public func trackAnger(){
+        trackInterface.presentController(withName: "Mad_View", context: nil)
+        self.setBackgroundColor(color: colorBlue)
+        
+        self.openModalOnTrack()
+    }
+    public func openModalOnTrack(){
+        timeout.cancel()
+    }
+    public func closeModalOnTrack(){
+        restStartTimeoutTimer()
+    }
+    public func addGroupQuestion(group: WKInterfaceGroup){
+        self.addItemToList(list: &self.listGroupQuestions, item: group)
+    }
     public func addGroupIcon(group: WKInterfaceGroup){
         self.addItemToList(list: &self.listGroupIcons, item: group)
     }
     public func addGroupList(group: WKInterfaceGroup){
         self.addItemToList(list: &self.listGroupListButtos, item: group)
+    }
+    public func removeGroupQuestion(group: WKInterfaceGroup){
+        self.removeItemFromList(list: &self.listGroupQuestions, item: group)
     }
     public func removeGroupIcon(group: WKInterfaceGroup){
         self.removeItemFromList(list: &self.listGroupIcons, item: group)
@@ -175,6 +214,11 @@ class AdaptivUI{
     private func setVisibleGroups(groupList: [WKInterfaceObject], hidden: Bool){
         for i in groupList.indices{
             groupList[i].setHidden(hidden)
+        }
+    }
+    private func setBackgroundColor(color: UIColor){
+        for i in listGroupQuestions.indices{
+            (listGroupQuestions[i] as? WKInterfaceGroup)?.setBackgroundColor(color)
         }
     }
     private func setIconButtonsSize(size: CGFloat){
