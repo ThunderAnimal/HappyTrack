@@ -34,11 +34,16 @@ class OnboardNameViewController: OnboardViewController {
     }
     
     @IBAction func startEditName(_ sender: UITextField) {
-        nameBorder.backgroundColor = AppColor().primaryColor
+        UIView.animate(withDuration: 0.5) { 
+            self.nameBorder.backgroundColor = AppColor().primaryColor
+        }
+        
         
     }
     @IBAction func entEdirName(_ sender: UITextField) {
-        nameBorder.backgroundColor = UIColor.lightGray
+        UIView.animate(withDuration: 0.5) {
+            self.nameBorder.backgroundColor = UIColor.lightGray
+        }
         
         if let shareDefaults = UserDefaults(suiteName: Constants.AppGroups.person_name.key()){
             shareDefaults.set(inputName.text, forKey: Constants.Person.name.key())
@@ -46,10 +51,14 @@ class OnboardNameViewController: OnboardViewController {
     }
     
     @IBAction func startEditLastname(_ sender: Any) {
-        lastnameBorder.backgroundColor = AppColor().primaryColor
+        UIView.animate(withDuration: 0.5) {
+            self.lastnameBorder.backgroundColor = AppColor().primaryColor        }
+        
     }
     @IBAction func endEditLastname(_ sender: UITextField) {
-        lastnameBorder.backgroundColor = UIColor.lightGray
+        UIView.animate(withDuration: 0.5) {
+            self.lastnameBorder.backgroundColor = UIColor.lightGray
+        }
         
         if let shareDefaults = UserDefaults(suiteName: Constants.AppGroups.person_name.key()){
             shareDefaults.set(inputLastname.text, forKey: Constants.Person.last_name.key())
