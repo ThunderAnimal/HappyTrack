@@ -85,6 +85,7 @@ class SettingsViewController: UITableViewController{
         if let shareDefaults = UserDefaults(suiteName: Constants.AppGroups.person_name.key()){
             shareDefaults.set(sender.text, forKey: Constants.Person.last_name.key())
         }
+        sendNameToWatch()
     }
     @IBAction func changeNotificationOn(_ sender: UISwitch) {
         let userDefaults = UserDefaults()
